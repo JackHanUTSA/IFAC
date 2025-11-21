@@ -37,3 +37,11 @@ In current LLM-based manipulation, environmental information is primarily derive
 • **Reduced HRC Overhead:** Human teleoperation (HRC) remains necessary to instruct and save new complex skills. However, by linking the DMP to a precise _physical condition classification_ (via Penetrative AI), the system minimizes repeated intervention, allowing the LLM to autonomously retrieve and execute the precise dynamic control needed whenever that condition is detected in a zero-shot fashion thereafter.
 
 This integration transforms the LLM from a primarily high-level planneror a general sensor interpreter into a **dynamic, adaptive, and physically grounded feedback policy** for complex manipulation tasks.
+### Keywords
+
+
+**DMP** is recognized as a **classic approach** in the field of robotic trajectory learning. Its primary purpose within the discussed system is to enable the Large Language Model (LLM)-based robot to learn complex motions from human intervention.
+
+• **Learning from Demonstration:** DMPs are integrated with a **teleoperation system** to allow the LLM-based robot to **learn from human guidance**. When a complex task requiring intricate trajectory planning fails using the robot's basic, pre-programmed motion functions (like opening a horizontally hinged oven door), a human operator can intervene via teleoperation.
+
+• **Trajectory Storage and Reuse:** The system captures and stores the trajectory data generated during manual teleoperation using DMP technology. These recorded, updated motion function sequences are stored in a **DMP library**. The LLM can then select and reuse these stored trajectories for future execution of the same or similar tasks, promoting **task-specific autonomy** and **bolstering the system's learning efficiency**.
