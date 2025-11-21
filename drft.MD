@@ -1,3 +1,6 @@
+
+
+
 ### Abstract
 
 interactive robots mission is a complex mission it need to nagvigate in complex and dynamic environment also need to fully flexable to planing the sequentially sub tasks. In order to achieve the goal we demo a method by utlize LLMs(large language model) and Reenforcement Learning. Our idea focuses on using an LLM's capacity for precise, short-horizon physical reasoning to dynamically select or modify the parameters of complex, learned robotic trajectories , effectively allowing the robot to autonomously execute tasks that previously required initial human intervention.
