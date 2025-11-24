@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ifacconf.aux
+The style file: ifacconf.bst
+Database file #1: ifacconf.bib
+Warning--I didn't find a database entry for "Abl:56"
+Warning--I didn't find a database entry for "AbTaRu:54"
+Warning--I didn't find a database entry for "Keo:58"
+Warning--I didn't find a database entry for "Pow:85"
+You've used 3 entries,
+            2921 wiz_defined-function locations,
+            609 strings with 5533 characters,
+and the built_in function-call counts, 2217 in all, are:
+= -- 155
+> -- 148
+< -- 0
++ -- 54
+- -- 51
+* -- 176
+:= -- 357
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 34
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 153
+empty$ -- 137
+format.name$ -- 60
+if$ -- 421
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 36
+newline$ -- 24
+num.names$ -- 12
+pop$ -- 88
+preamble$ -- 1
+purify$ -- 29
+quote$ -- 0
+skip$ -- 51
+stack$ -- 0
+substring$ -- 49
+swap$ -- 77
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 27
+warning$ -- 0
+while$ -- 12
+width$ -- 0
+write$ -- 45
+(There were 4 warnings)

@@ -13,8 +13,7 @@
 \begin{document}
 \begin{frontmatter}
 
-\title{Style for IFAC Conferences \& Symposia: Use Title Case for
-  Paper Title\thanksref{footnoteinfo}} 
+\title{Dynamic Penetrative Trajectory Adaptation\thanksref{footnoteinfo}} 
 % Title, preferably not more than 10 words.
 
 \thanks[footnoteinfo]{Sponsor and financial support acknowledgment
@@ -58,9 +57,11 @@ and Robust Reinforcement Learning (RL) for policy optimization and action excuti
 
 
 
-\section{Procedure for Paper Submission}
+\section{Background}
 
-Next we see a few subsections.
+The complex nature of interactive robot missions, particularly those involving high-level 
+language models (LLMs) or sophisticated reinforcement learning (RL), 
+presents numerous challenges across planning, learning, perception, and execution.
 
 \subsection{Review Stage}
 
@@ -68,19 +69,26 @@ In current LLM-based manipulation, environmental information is
 primarily derived visually (e.g., YOLOv5 for object position)\cite{liu2024enhancing}. 
 However, fine-grained tasks often depend on non-visual physical 
 feedback (e.g., force or torque required to open a tight hinge). 
-In DPTA, the Penetrative AI\cite{xu2024penetrative} paradigm is employed to process **digitized sensor signals** from the robot's end effector 
+In DPTA, the Penetrative AI\cite{xu2024penetrative} paradigm is employed to process digitized sensor signals** from the robot's end effector 
 (e.g., force/torque sensors, joint current feedback)
 
 LLM's task is not to determine a broad state (like "indoors/outdoors"), 
-but to execute a **real-time, micro-level physical classification** of the 
+but to execute a real-time, micro-level physical classification of the 
 object/environment state during the initial phase of interaction 
 (e.g., the first 100 milliseconds of grasping a handle or pushing a button)\cite{bhat2024grounding}.
 
-Our prompt utilizes the **procedural guidance** and **fuzzy logic** methods demonstrated in 
+Our prompt utilizes the procedural guidance and fuzzy logic methods demonstrated in 
 the heart rate detection task.\cite{xu2024penetrative} It contains a short sequence of 
 raw numerical feedback (avoiding the token limit constraint associated with 
 long digitized sequences) and instructs the LLM to classify the physical anomaly based on 
 relative changes in the sequence.
+
+Example Output: Based on the input torque sequence, the LLM reasoning\cite{liu2024enhancing} determines the precise 
+physical condition, such as "Horizontal-Axis Oven Door, 
+stiff hinge" or "Press-Pull Cabinet, high friction."
+
+
+
 
 \subsection{Equations}
 
