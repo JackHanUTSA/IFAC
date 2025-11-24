@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,25 +7,25 @@
   \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
-\bibitem[{Able(1956)}]{Abl:56}
-Able, B. (1956).
-\newblock Nucleic acid content of microscope.
-\newblock \emph{Nature}, 135, 7--9.
+\bibitem[{Bhat et~al.(2024)Bhat, Kaypak, Krishnamurthy, Karri, and
+  Khorrami}]{bhat2024grounding}
+Bhat, V., Kaypak, A.U., Krishnamurthy, P., Karri, R., and Khorrami, F. (2024).
+\newblock Grounding llms for robot task planning using closed-loop state
+  feedback.
+\newblock \emph{arXiv preprint arXiv:2402.08546}.
 
-\bibitem[{Able et~al.(1954)Able, Tagg, and Rush}]{AbTaRu:54}
-Able, B., Tagg, R., and Rush, M. (1954).
-\newblock Enzyme-catalyzed cellular transanimations.
-\newblock In A.~Round (ed.), \emph{Advances in Enzymology}, volume~2, 125--247.
-  Academic Press, New York, 3rd edition.
+\bibitem[{Liu et~al.(2024)Liu, Zhu, Kato, Tsukahara, Kondo, Aoyama, and
+  Hasegawa}]{liu2024enhancing}
+Liu, H., Zhu, Y., Kato, K., Tsukahara, A., Kondo, I., Aoyama, T., and Hasegawa,
+  Y. (2024).
+\newblock Enhancing the llm-based robot manipulation through human-robot
+  collaboration.
+\newblock \emph{arXiv preprint arXiv:2406.14097}.
 
-\bibitem[{Keohane(1958)}]{Keo:58}
-Keohane, R. (1958).
-\newblock \emph{Power and Interdependence: World Politics in Transitions}.
-\newblock Little, Brown \& Co., Boston.
-
-\bibitem[{Powers(1985)}]{Pow:85}
-Powers, T. (1985).
-\newblock Is there a way out?
-\newblock \emph{Harpers}, 35--47.
+\bibitem[{Xu et~al.(2024)Xu, Han, Yang, Li, and Srivastava}]{xu2024penetrative}
+Xu, H., Han, L., Yang, Q., Li, M., and Srivastava, M. (2024).
+\newblock Penetrative ai: Making llms comprehend the physical world.
+\newblock In \emph{Proceedings of the 25th International Workshop on Mobile
+  Computing Systems and Applications}, 1--7.
 
 \end{thebibliography}

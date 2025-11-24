@@ -47,20 +47,15 @@ Five to ten keywords, preferably chosen from the IFAC keyword list.
 %===============================================================================
 
 \section{Introduction}
-This document is a template for \LaTeXe. If you are reading a paper or
-PDF version of this document, please download the electronic file
-\texttt{ifacconf.tex}. You will also need the class file
-\texttt{ifacconf.cls}. Both files are available on the IFAC web site.
+interactive robots mission is a complex mission it need to nagvigate in complex and 
+dynamic environment also need to fully flexable to planing the sequentially sub tasks. 
+In order to achieve the goal we demo a method by utlize LLMs(large language model) and Reenforcement Learning. 
+Our idea focuses on using an LLM's capacity for precise, short-horizon physical reasoning to 
+dynamically select or modify the parameters of complex, learned robotic trajectories, 
+effectively allowing the robot to autonomously execute tasks that previously required initial human intervention.
+The conceptual framework of Dynamic Penetrative Trajectory Adaptation (DPTA) represents a synthesis of three distinct advanced AI paradigms found in the sources: Penetrative AI (LLM sensor comprehension), Dynamic Movement Primitives (DMP) and Human-Robot Collaboration (HRC) for trajectory learning, 
+and Robust Reinforcement Learning (RL) for policy optimization and action excution.
 
-Please stick to the format defined by the \texttt{ifacconf} class, and
-do not change the margins or the general layout of the paper. It
-is especially important that you do not put any running header/footer
-or page number in the submitted paper.\footnote{
-This is the default for the provided class file.}
-Use \emph{italics} for emphasis; do not underline.
-
-Page limits may vary from conference to conference. Please observe the 
-page limits of the event for which your paper is intended.
 
 
 \section{Procedure for Paper Submission}
@@ -69,14 +64,23 @@ Next we see a few subsections.
 
 \subsection{Review Stage}
 
-For submission guidelines, follow instructions on paper submission
-system as well as the event website.
+In current LLM-based manipulation, environmental information is 
+primarily derived visually (e.g., YOLOv5 for object position)\cite{liu2024enhancing}. 
+However, fine-grained tasks often depend on non-visual physical 
+feedback (e.g., force or torque required to open a tight hinge). 
+In DPTA, the Penetrative AI\cite{xu2024penetrative} paradigm is employed to process **digitized sensor signals** from the robot's end effector 
+(e.g., force/torque sensors, joint current feedback)
 
-Note that conferences impose strict page limits, so it will be better
-for you to prepare your initial submission in the camera ready layout
-so that you will have a good estimate for the paper
-length. Additionally, the effort required for final submission will be
-minimal.
+LLM's task is not to determine a broad state (like "indoors/outdoors"), 
+but to execute a **real-time, micro-level physical classification** of the 
+object/environment state during the initial phase of interaction 
+(e.g., the first 100 milliseconds of grasping a handle or pushing a button)\cite{bhat2024grounding}.
+
+Our prompt utilizes the **procedural guidance** and **fuzzy logic** methods demonstrated in 
+the heart rate detection task.\cite{xu2024penetrative} It contains a short sequence of 
+raw numerical feedback (avoiding the token limit constraint associated with 
+long digitized sequences) and instructs the LLM to classify the physical anomaly based on 
+relative changes in the sequence.
 
 \subsection{Equations}
 
