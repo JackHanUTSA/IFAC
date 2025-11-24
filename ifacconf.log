@@ -1,51 +1,51 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.7.24)  18 NOV 2025 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.9.9)  21 NOV 2025 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/r91/IFAC/ifacconf.tex
-(/home/r91/IFAC/ifacconf.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21> (./ifacconf.cls
+**"c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.tex"
+(c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-09-06> (c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.cls
 Document Class: ifacconf 2022/02/11, 1.3: IFAC-PapersOnline
 
-\@frontmatterwidth=\dimen138
-\@bls=\dimen139
+\@frontmatterwidth=\dimen134
+\@bls=\dimen135
 \eqntopsep=\skip47
-\eqnarraycolsep=\dimen140
-\labelwidthi=\dimen141
-\labelwidthii=\dimen142
-\labelwidthiii=\dimen143
-\labelwidthiv=\dimen144
-\@maxlistdepth=\count185
+\eqnarraycolsep=\dimen136
+\labelwidthi=\dimen137
+\labelwidthii=\dimen138
+\labelwidthiii=\dimen139
+\labelwidthiv=\dimen140
+\@maxlistdepth=\count168
 \eqnbaselineskip=\skip48
 \eqnlineskip=\skip49
-\mathindent=\dimen145
-\rulepreskip=\dimen146
-\rulepostskip=\dimen147
-\Arrayrulewidth=\dimen148
-\crulepostskip=\dimen149
-\@Ldec=\dimen150
-\@Rdec=\dimen151
-\@Lpmdec=\dimen152
-\@Rpmdec=\dimen153
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-(/usr/share/texlive/texmf-dist/tex/latex/tools/theorem.sty
+\mathindent=\dimen141
+\rulepreskip=\dimen142
+\rulepostskip=\dimen143
+\Arrayrulewidth=\dimen144
+\crulepostskip=\dimen145
+\@Ldec=\dimen146
+\@Rdec=\dimen147
+\@Lpmdec=\dimen148
+\@Rpmdec=\dimen149
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+(c:/texlive/2020/texmf-dist/tex/latex/tools/theorem.sty
 Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
-\theorem@style=\toks16
-\theorem@bodyfont=\toks17
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
 \theorempreskipamount=\skip50
 \theorempostskipamount=\skip51
- (/usr/share/texlive/texmf-dist/tex/latex/tools/thp.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/tools/thp.sty
 File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/newlfont.sty
+)) (c:/texlive/2020/texmf-dist/tex/latex/base/newlfont.sty
 Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
 LaTeX Info: Redefining \em on input line 57.
- (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+ (c:/texlive/2020/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -58,83 +58,83 @@ LaTeX Info: Redefining \bf on input line 599.
 LaTeX Info: Redefining \it on input line 600.
 LaTeX Info: Redefining \sl on input line 601.
 LaTeX Info: Redefining \sc on input line 602.
-\c@thm=\count191
-\c@alg=\count192
-\c@algorithm=\count193
-\c@note=\count194
-\c@summ=\count195
-\c@case=\count196
-\@tempcntc=\count197
-\c@figure=\count198
-\c@table=\count199
-\t@glob@notes=\toks18
-\t@loc@notes=\toks19
-\note@cnt=\count266
-\c@author=\count267
-\n@author=\count268
-\c@collab=\count269
-\n@collab=\count270
-\c@address=\count271
-\sv@mathsurround=\dimen154
-\sv@hyphenpenalty=\count272
-\prev@elem=\count273
-\cur@elem=\count274
-\fm@box=\box50
-\fm@size=\dimen155
-\t@abstract=\box51
-\t@keyword=\box52
-\rep@mod=\count275
-\t@xtheight=\dimen156
-\@logoheight=\dimen157
-\@pubyear=\count276
-\c@firstpage=\count277
-\c@lastpage=\count278
-\slashbox=\box53
+\c@thm=\count174
+\c@alg=\count175
+\c@algorithm=\count176
+\c@note=\count177
+\c@summ=\count178
+\c@case=\count179
+\@tempcntc=\count180
+\c@figure=\count181
+\c@table=\count182
+\t@glob@notes=\toks17
+\t@loc@notes=\toks18
+\note@cnt=\count183
+\c@author=\count184
+\n@author=\count185
+\c@collab=\count186
+\n@collab=\count187
+\c@address=\count188
+\sv@mathsurround=\dimen150
+\sv@hyphenpenalty=\count189
+\prev@elem=\count190
+\cur@elem=\count191
+\fm@box=\box45
+\fm@size=\dimen151
+\t@abstract=\box46
+\t@keyword=\box47
+\rep@mod=\count192
+\t@xtheight=\dimen152
+\@logoheight=\dimen153
+\@pubyear=\count193
+\c@firstpage=\count194
+\c@lastpage=\count195
+\slashbox=\box48
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 1508.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 1508.
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 1508.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+ (c:/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-\Slashbox=\box54
+\Slashbox=\box49
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 1509.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 1509.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 1509.
-\@frontindent=\dimen158
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+\@frontindent=\dimen154
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+\KV@toks@=\toks19
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen159
-\Gin@req@width=\dimen160
-) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+\Gin@req@height=\dimen155
+\Gin@req@width=\dimen156
+) (c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count279
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
-\l__pdf_internal_box=\box55
-) (./ifacconf.aux)
+\c@NAT@ctr=\count196
+) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-01 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count197
+\l__pdf_internal_box=\box50
+) (c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.aux)
 \openout1 = `ifacconf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -151,23 +151,23 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen161
-\scratchbox=\box56
-\nofMPsegments=\count282
-\nofMParguments=\count283
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen162
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
-\everyMPtoPDFconversion=\toks22
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\scratchcounter=\count198
+\scratchdimen=\dimen157
+\scratchbox=\box51
+\nofMPsegments=\count199
+\nofMParguments=\count266
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen158
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
+\everyMPtoPDFconversion=\toks21
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 17.
@@ -175,27 +175,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9.79996> on input line 17.
-\c@sv@footnote=\count287
+\c@sv@footnote=\count270
 <bifurcation.jpg, id=1, 670.505pt x 501.875pt>
 File: bifurcation.jpg Graphic file (type jpg)
 <use bifurcation.jpg>
 Package pdftex.def Info: bifurcation.jpg  used on input line 130.
 (pdftex.def)             Requested size: 239.00298pt x 178.89055pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2 <./bifurcation.jpg>] (./ifacconf.bbl) [3] (./ifacconf.aux) ) 
+] [2 <c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/bifurcation.jpg>] (c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.bbl) [3] (c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.aux) ) 
 Here is how much of TeX's memory you used:
- 2269 strings out of 480171
- 33230 string characters out of 5894489
- 331872 words of memory out of 5000000
- 20227 multiletter control sequences out of 15000+600000
- 476187 words of font info for 56 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 55i,10n,62p,302b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on ifacconf.pdf (3 pages, 270457 bytes).
+ 2093 strings out of 480876
+ 28474 string characters out of 5911488
+ 274392 words of memory out of 5000000
+ 17726 multiletter control sequences out of 15000+600000
+ 542016 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,10n,33p,343b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on "c:/Users/irked/OneDrive - University of Texas at San Antonio/Papers/IFAC/ifacconf.pdf" (3 pages, 256615 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
