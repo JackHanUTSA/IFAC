@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex ifacconf"] 1764105185 "ifacconf.aux" "ifacconf.bbl" "ifacconf" 1764105186
+["bibtex ifacconf"] 1764106279 "ifacconf.aux" "ifacconf.bbl" "ifacconf" 1764106280
   "./ifacconf.bst" 1763674818 30606 0a94c3be66b01cc15224e14423d70f48 ""
-  "ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 "pdflatex"
+  "ifacconf.aux" 1764106280 4497 aa327f714eb889cf5a0012a042558ae6 "pdflatex"
   "ifacconf.bib" 1763950254 2384 bba1568aa083a65d69a45499aa26e756 ""
   (generated)
-  "ifacconf.bbl"
   "ifacconf.blg"
-["pdflatex"] 1764105185 "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" "ifacconf" 1764105186
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 ""
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" 1764105184 18346 25f1088695be059880faf245c1be6bb0 ""
+  "ifacconf.bbl"
+["pdflatex"] 1764106279 "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" "ifacconf" 1764106280
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux" 1764106280 4497 aa327f714eb889cf5a0012a042558ae6 ""
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" 1764106278 18500 9c8cf73091d54429c70b4d38b5c5f7ff ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -74,13 +74,13 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1631742384 2724743 d675871f9c627bd476b3b76422141bcd ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "bifurcation.jpg" 1763674818 63767 1937436b111a9cf45da0b9188ab3b048 ""
-  "ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 "pdflatex"
-  "ifacconf.bbl" 1764105185 1627 1e3ae258b02c407b3f97c3d7d402b5b4 "bibtex ifacconf"
+  "ifacconf.aux" 1764106280 4497 aa327f714eb889cf5a0012a042558ae6 "pdflatex"
+  "ifacconf.bbl" 1764106279 2049 9250eb9cef30ece6211b8ffeb62e15f4 "bibtex ifacconf"
   "ifacconf.cls" 1763674818 65574 8eace75e0305628a2c07c0f2a28ee3cd ""
-  "ifacconf.tex" 1764105184 18346 25f1088695be059880faf245c1be6bb0 ""
+  "ifacconf.tex" 1764106278 18500 9c8cf73091d54429c70b4d38b5c5f7ff ""
   (generated)
+  "ifacconf.pdf"
   "ifacconf.log"
   "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf"
-  "ifacconf.pdf"
   "ifacconf.aux"
   "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.log"

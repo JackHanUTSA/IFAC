@@ -7,45 +7,45 @@ Warning--I didn't find a database entry for "Abl:56"
 Warning--I didn't find a database entry for "AbTaRu:54"
 Warning--I didn't find a database entry for "Keo:58"
 Warning--I didn't find a database entry for "Pow:85"
-You've used 4 entries,
+You've used 5 entries,
             2921 wiz_defined-function locations,
-            615 strings with 5733 characters,
-and the built_in function-call counts, 3084 in all, are:
-= -- 232
-> -- 184
+            621 strings with 6030 characters,
+and the built_in function-call counts, 4006 in all, are:
+= -- 288
+> -- 268
 < -- 0
-+ -- 67
-- -- 63
-* -- 236
-:= -- 478
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 45
-chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 215
-empty$ -- 204
-format.name$ -- 75
-if$ -- 608
++ -- 98
+- -- 93
+* -- 319
+:= -- 630
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 60
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 273
+empty$ -- 249
+format.name$ -- 108
+if$ -- 777
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 47
-newline$ -- 29
-num.names$ -- 16
-pop$ -- 115
+missing$ -- 64
+newline$ -- 34
+num.names$ -- 20
+pop$ -- 151
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 51
 quote$ -- 0
-skip$ -- 81
+skip$ -- 95
 stack$ -- 0
-substring$ -- 100
-swap$ -- 111
+substring$ -- 111
+swap$ -- 145
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 45
 warning$ -- 0
-while$ -- 18
+while$ -- 21
 width$ -- 0
-write$ -- 59
+write$ -- 72
 (There were 4 warnings)
