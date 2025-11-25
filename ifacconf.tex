@@ -100,6 +100,12 @@ may not be robust to real-world noise. For instance, a policy trained in simulat
 robust to small errors in box position estimation (e.g., errors with a standard deviation of 1cm) when deployed 
 on a physical robot.\cite{andrychowicz2017hindsight}
 
+Challenges in Low-Level Control
+
+Controllability and Security Risks: Since LLM responses are probabilistic, there is no guarantee that the swarm will behave as intended. This also introduces new security vulnerabilities, as it needs to be studied if users or even other robots can reprogram robots through prompt injection attacks or 
+if a malicious agent could send misleading information (Byzantine robot detection)\cite{strobel2024llm2swarm}
+
+
 
 \subsection{Solution Overview: Dynamic Penetrative Trajectory Adaptation (DPTA)}
 

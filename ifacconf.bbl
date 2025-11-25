@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -29,6 +29,13 @@ Liu, H., Zhu, Y., Kato, K., Tsukahara, A., Kondo, I., Aoyama, T., and Hasegawa,
 \newblock Enhancing the llm-based robot manipulation through human-robot
   collaboration.
 \newblock \emph{arXiv preprint arXiv:2406.14097}.
+
+\bibitem[{Strobel et~al.(2024)Strobel, Dorigo, and
+  Fritz}]{strobel2024llm2swarm}
+Strobel, V., Dorigo, M., and Fritz, M. (2024).
+\newblock Llm2swarm: robot swarms that responsively reason, plan, and
+  collaborate through llms.
+\newblock \emph{arXiv preprint arXiv:2410.11387}.
 
 \bibitem[{Wang et~al.(2024)Wang, Zhang, Chen, and Sreenath}]{wang2024prompt}
 Wang, Y.J., Zhang, B., Chen, J., and Sreenath, K. (2024).
