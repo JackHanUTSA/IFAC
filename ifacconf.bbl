@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -21,6 +21,12 @@ Liu, H., Zhu, Y., Kato, K., Tsukahara, A., Kondo, I., Aoyama, T., and Hasegawa,
 \newblock Enhancing the llm-based robot manipulation through human-robot
   collaboration.
 \newblock \emph{arXiv preprint arXiv:2406.14097}.
+
+\bibitem[{Wang et~al.(2024)Wang, Zhang, Chen, and Sreenath}]{wang2024prompt}
+Wang, Y.J., Zhang, B., Chen, J., and Sreenath, K. (2024).
+\newblock Prompt a robot to walk with large language models.
+\newblock In \emph{2024 IEEE 63rd Conference on Decision and Control (CDC)},
+  1531--1538. IEEE.
 
 \bibitem[{Xu et~al.(2024)Xu, Han, Yang, Li, and Srivastava}]{xu2024penetrative}
 Xu, H., Han, L., Yang, Q., Li, M., and Srivastava, M. (2024).

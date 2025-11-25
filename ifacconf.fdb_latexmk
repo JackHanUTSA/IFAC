@@ -1,15 +1,17 @@
 # Fdb version 3
-["bibtex ifacconf"] 1764016775 "ifacconf.aux" "ifacconf.bbl" "ifacconf" 1764017424
+["bibtex ifacconf"] 1764105185 "ifacconf.aux" "ifacconf.bbl" "ifacconf" 1764105186
   "./ifacconf.bst" 1763674818 30606 0a94c3be66b01cc15224e14423d70f48 ""
-  "ifacconf.aux" 1764017424 3825 cbc6882b26ca290d50fe2efe6ee72f20 "pdflatex"
+  "ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 "pdflatex"
   "ifacconf.bib" 1763950254 2384 bba1568aa083a65d69a45499aa26e756 ""
   (generated)
-  "ifacconf.blg"
   "ifacconf.bbl"
-["pdflatex"] 1764017424 "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" "ifacconf" 1764017424
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux" 1764017424 3825 cbc6882b26ca290d50fe2efe6ee72f20 ""
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" 1764017424 15549 e3cf386c53a516511ebe78d47a9f53dd ""
+  "ifacconf.blg"
+["pdflatex"] 1764105185 "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" "ifacconf" 1764105186
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 ""
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.tex" 1764105184 18346 25f1088695be059880faf245c1be6bb0 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
@@ -50,6 +52,7 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb" 1248133631 24287 6b803fa9eb1ddff9112e00519b09dd9e ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/base/latexsym.sty" 1580683321 2854 12555a1cadee722c56d2816ab5a895f5 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/base/newlfont.sty" 1580683321 2912 c810e4c9087d350ebb2bdc167efc3a18 ""
@@ -71,13 +74,13 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1631742384 2724743 d675871f9c627bd476b3b76422141bcd ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "bifurcation.jpg" 1763674818 63767 1937436b111a9cf45da0b9188ab3b048 ""
-  "ifacconf.aux" 1764017424 3825 cbc6882b26ca290d50fe2efe6ee72f20 "pdflatex"
-  "ifacconf.bbl" 1764016776 1333 2dc18a92d9438b70d2e1672f8cc2cd5d "bibtex ifacconf"
+  "ifacconf.aux" 1764105186 4149 69b74d02edc7819fc84c973095213279 "pdflatex"
+  "ifacconf.bbl" 1764105185 1627 1e3ae258b02c407b3f97c3d7d402b5b4 "bibtex ifacconf"
   "ifacconf.cls" 1763674818 65574 8eace75e0305628a2c07c0f2a28ee3cd ""
-  "ifacconf.tex" 1764017424 15549 e3cf386c53a516511ebe78d47a9f53dd ""
+  "ifacconf.tex" 1764105184 18346 25f1088695be059880faf245c1be6bb0 ""
   (generated)
-  "ifacconf.aux"
-  "ifacconf.pdf"
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf"
   "ifacconf.log"
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf"
+  "ifacconf.pdf"
+  "ifacconf.aux"
   "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.log"
