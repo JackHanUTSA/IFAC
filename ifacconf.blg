@@ -3,13 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: ifacconf.aux
 The style file: ifacconf.bst
 Database file #1: ifacconf.bib
-Warning--I didn't find a database entry for "Abl:56"
-Warning--I didn't find a database entry for "AbTaRu:54"
-Warning--I didn't find a database entry for "Keo:58"
-Warning--I didn't find a database entry for "Pow:85"
 You've used 6 entries,
             2921 wiz_defined-function locations,
-            625 strings with 6215 characters,
+            617 strings with 6161 characters,
 and the built_in function-call counts, 4545 in all, are:
 = -- 329
 > -- 296
@@ -48,4 +44,3 @@ warning$ -- 0
 while$ -- 24
 width$ -- 0
 write$ -- 84
-(There were 4 warnings)
