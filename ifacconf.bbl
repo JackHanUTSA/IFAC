@@ -20,7 +20,7 @@ Andrychowicz, M., Wolski, F., Ray, A., Schneider, J., Fong, R., Welinder, P.,
 Bhat, V., Kaypak, A.U., Krishnamurthy, P., Karri, R., and Khorrami, F. (2024).
 \newblock Grounding llms for robot task planning using closed-loop state
   feedback.
-\newblock \emph{arXiv preprint arXiv:2402.08546}.
+\newblock \emph{CoRR}.
 
 \bibitem[{Liu et~al.(2024)Liu, Zhu, Kato, Tsukahara, Kondo, Aoyama, and
   Hasegawa}]{liu2024enhancing}
@@ -28,14 +28,13 @@ Liu, H., Zhu, Y., Kato, K., Tsukahara, A., Kondo, I., Aoyama, T., and Hasegawa,
   Y. (2024).
 \newblock Enhancing the llm-based robot manipulation through human-robot
   collaboration.
-\newblock \emph{arXiv preprint arXiv:2406.14097}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 9(8), 6904--6911.
 
-\bibitem[{Strobel et~al.(2024)Strobel, Dorigo, and
-  Fritz}]{strobel2024llm2swarm}
-Strobel, V., Dorigo, M., and Fritz, M. (2024).
-\newblock Llm2swarm: robot swarms that responsively reason, plan, and
+\bibitem[{Strobel et~al.()Strobel, Dorigo, and Fritz}]{strobel2024llm2swarm}
+Strobel, V., Dorigo, M., and Fritz, M. (????).
+\newblock Llm2swarm: Robot swarms that responsively reason, plan, and
   collaborate through llms.
-\newblock \emph{arXiv preprint arXiv:2410.11387}.
+\newblock In \emph{NeurIPS 2024 Workshop on Open-World Agents}.
 
 \bibitem[{Wang et~al.(2024)Wang, Zhang, Chen, and Sreenath}]{wang2024prompt}
 Wang, Y.J., Zhang, B., Chen, J., and Sreenath, K. (2024).
