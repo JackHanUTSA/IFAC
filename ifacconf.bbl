@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -22,6 +22,44 @@ Bhat, V., Kaypak, A.U., Krishnamurthy, P., Karri, R., and Khorrami, F. (2024).
   feedback.
 \newblock \emph{CoRR}.
 
+\bibitem[{Brohan et~al.(2023)Brohan, Chebotar, Finn, Hausman, Herzog, Ho,
+  Ibarz, Irpan, Jang, Julian et~al.}]{brohan2023can}
+Brohan, A., Chebotar, Y., Finn, C., Hausman, K., Herzog, A., Ho, D., Ibarz, J.,
+  Irpan, A., Jang, E., Julian, R., et~al. (2023).
+\newblock Do as i can, not as i say: Grounding language in robotic affordances.
+\newblock In \emph{Conference on robot learning}, 287--318. PMLR.
+
+\bibitem[{Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell et~al.}]{brown2020language}
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.D., Dhariwal, P.,
+  Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et~al. (2020).
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in neural information processing systems}, 33,
+  1877--1901.
+
+\bibitem[{Huang et~al.(2022)Huang, Abbeel, Pathak, and
+  Mordatch}]{huang2022language}
+Huang, W., Abbeel, P., Pathak, D., and Mordatch, I. (2022).
+\newblock Language models as zero-shot planners: Extracting actionable
+  knowledge for embodied agents.
+\newblock In \emph{International Conference on Machine Learning}.
+
+\bibitem[{Huang et~al.(2023)Huang, Xia, Xiao, Chan, Liang, Florence, Zeng,
+  Tompson, Mordatch, Chebotar et~al.}]{huang2023inner}
+Huang, W., Xia, F., Xiao, T., Chan, H., Liang, J., Florence, P., Zeng, A.,
+  Tompson, J., Mordatch, I., Chebotar, Y., et~al. (2023).
+\newblock Inner monologue: Embodied reasoning through planning with language
+  models.
+\newblock In \emph{Conference on Robot Learning}, 1769--1782. PMLR.
+
+\bibitem[{Liang et~al.(2023)Liang, Huang, Xia, Xu, Hausman, Ichter, Florence,
+  and Zeng}]{liang2023code}
+Liang, J., Huang, W., Xia, F., Xu, P., Hausman, K., Ichter, B., Florence, P.,
+  and Zeng, A. (2023).
+\newblock Code as policies: Language model programs for embodied control.
+\newblock In \emph{2023 IEEE International Conference on Robotics and
+  Automation (ICRA)}. IEEE.
+
 \bibitem[{Liu et~al.(2024)Liu, Zhu, Kato, Tsukahara, Kondo, Aoyama, and
   Hasegawa}]{liu2024enhancing}
 Liu, H., Zhu, Y., Kato, K., Tsukahara, A., Kondo, I., Aoyama, T., and Hasegawa,
@@ -35,6 +73,12 @@ Strobel, V., Dorigo, M., and Fritz, M. (????).
 \newblock Llm2swarm: Robot swarms that responsively reason, plan, and
   collaborate through llms.
 \newblock In \emph{NeurIPS 2024 Workshop on Open-World Agents}.
+
+\bibitem[{Vemprala et~al.(2024)Vemprala, Bonatti, Bucker, and
+  Kapoor}]{vemprala2024chatgpt}
+Vemprala, S.H., Bonatti, R., Bucker, A., and Kapoor, A. (2024).
+\newblock Chatgpt for robotics: Design principles and model abilities.
+\newblock \emph{Ieee Access}, 12, 55682--55696.
 
 \bibitem[{Wang et~al.(2024)Wang, Zhang, Chen, and Sreenath}]{wang2024prompt}
 Wang, Y.J., Zhang, B., Chen, J., and Sreenath, K. (2024).

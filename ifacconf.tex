@@ -141,42 +141,53 @@ stiff hinge" or "Press-Pull Cabinet, high friction."
 
 \end{itemize}
 
+\subsection{Literature Review}
 
 The proposed Dynamic Penetrative Trajectory Adaptation (DPTA) framework differentiates itself from existing research in LLM-controlled robotics by addressing limitations in physical grounding, low-level trajectory execution, and robust policy learning.
-\begin{enumerate} \item \textbf{Existing Work: High-Level Planning with Imperfect Grounding}
-Existing works leverage large language models (LLMs) as **zero-shot planners** to decompose high-level instructions (e.g., "make breakfast") into a sequence of actionable steps [1-4]. Methods like those involving **Semantic Translation** improve executability by mapping LLM-generated phrases to the most semantically similar admissible action in a predefined set [5-7]. **SayCan** grounds LLM output by weighting actions based on learned **skill affordances** (value functions), ensuring the proposed step is feasible in the current state [1, 2, 8, 9].
+\begin{enumerate} 
 
-$\to$ \textbf{Limitation: Reliance on Narrow APIs and Lack of Deep Physical Context}
+\item \textbf{High-Level Planning with Imperfect Grounding}
+Existing works leverage large language models (LLMs) as \textbf{zero-shot planners} to decompose high-level instructions (e.g., "make breakfast") 
+into a sequence of actionable steps [\cite{huang2022language}]. Methods like those involving \textbf{Semantic Translation} improve executability 
+by mapping LLM-generated phrases to the most semantically similar admissible action in a predefined set. 
+\textbf{SayCan} grounds LLM output by weighting actions based on learned \textbf{skill affordances} (value functions), 
+ensuring the proposed step is feasible in the current state [\cite{brohan2023can}].
 
-Despite these efforts, LLM-generated plans are still **frequently not executable** in interactive environments [10-12] and struggle with mid-level grounding, often missing necessary common-sense actions [3]. Critically, most systems rely on predetermined **vision APIs** (like object detectors) to describe the scene [13]. This focus on visual data ignores crucial non-visual **physical feedback** (e.g., force or torque) needed for fine-grained tasks [13, 14], leaving the LLM policies restricted by **what the perception APIs can describe** [15].
+\textbf{Limitation: Reliance on Narrow APIs and Lack of Deep Physical Context}
 
-$\to$ \textbf{Your Approach: Penetrative Awareness for Micro-Level Physical Grounding}
+Despite these efforts, LLM-generated plans are still frequently not executable in interactive environments (\cite{huang2022language}) and 
+struggle with mid-level grounding, often missing necessary common-sense actions [\cite{huang2022language}].    
+Critically, most systems rely on predetermined \textbf{vision APIs} (like object detectors) to describe the scene [\cite{vemprala2024chatgpt}]. 
+This focus on visual data ignores crucial non-visual \textbf{physical feedback} (e.g., force or torque) needed for fine-grained tasks [\cite{huang2023inner}], 
+leaving the LLM policies restricted by \textbf{what the perception APIs can describe} [\cite{brown2020language}].
 
-DPTA implements **Penetrative AI**, enabling the LLM to directly process **raw or digitized sensor signals** (numerical sequences) from the end effector [14, 16, 17]. This allows the system to achieve **micro-level physical classification** (e.g., determining hinge stiffness or surface friction) during the initial phase of interaction, providing crucial contextual grounding that traditional visual-language models (VLMs) lack [14].
+\item \textbf{Code Generation and Trajectory Management}
 
-\item \textbf{Existing Work: Code Generation and Trajectory Management}
+Recent research utilizes LLMs to directly generate \textbf{policy code (Code as Policies)}, allowing the model to compose 
+perception-to-control logic and reference external libraries (like NumPy) for complex behaviors such as spatial-geometric reasoning [\cite{liang2023code}]. 
+Furthermore, LLMs have been explored as \textbf{low-level feedback policies} for dynamic systems like robot walking by outputting target joint positions 
+directly from historical input-output sequences [\cite{liang2023code}].
 
-Recent research utilizes LLMs to directly generate **policy code (Code as Policies)**, allowing the model to compose perception-to-control logic and reference external libraries (like NumPy) for complex behaviors such as spatial-geometric reasoning [18, 19]. Furthermore, LLMs have been explored as **low-level feedback policies** for dynamic systems like robot walking by outputting target joint positions directly from historical input-output sequences [20, 21].
 
-$\to$ \textbf{Limitation: Failure on Complex Trajectories and Prompt Fragility}
+\item \textbf{Closed-Loop Adaptation and Policy Learning}
 
-LLM-generated code often **falters when dealing with complex trajectories** [13]. While the code approach allows the robot to execute sequences of predefined motion primitives (e.g., pick, move, place), it assumes the existence of complex skills (e.g., `robot.place\_a\_bit\_right()`) [22]. Furthermore, using LLMs for low-level control is highly susceptible to **prompt fragility**, where minor alterations can dramatically affect performance [23]. Generating code for intricate or long, specialized trajectories remains impractical without extensive domain knowledge injection.
-
-$\to$ \textbf{Your Approach: Dynamic Movement Primitives (DMP) via HRC}
-
-DPTA mitigates the code generation failure for complex motions by incorporating **Dynamic Movement Primitives (DMP)** [24]. Complex, specialized trajectories are acquired through **manual teleoperation** via **Human-Robot Collaboration (HRC)** and stored in a specialized **DMP library** [24, 25]. The LLM's task is then reduced to selecting the correct, highly specialized, and robust DMP from the library to execute, promoting **task-specific autonomy** without forcing the LLM to synthesize brittle code for movement kinematics [24].
-
-\item \textbf{Existing Work: Closed-Loop Adaptation and Policy Learning}
-
-Systems such as **Inner Monologue** and **Socratic Models** integrate closed-loop feedback by feeding natural language observations (e.g., success detection or scene description updates) back into the LLM prompt, enabling the LLM planner to reason over outcomes and dynamically re-plan actions [2, 26, 27]. In the domain of reinforcement learning (RL), solving robotic tasks often faces the critical challenge of **sparse and binary rewards** [28].
+Systems such as \textbf{Inner Monologue} and \textbf{Socratic Models} integrate closed-loop feedback by feeding natural language 
+observations (e.g., success detection or scene description updates) back into the LLM prompt, enabling the LLM planner to reason over outcomes and 
+dynamically re-plan actions [huang2023inner]. In the domain of reinforcement learning (RL), solving robotic tasks often faces the critical challenge of 
+\textbf{sparse and binary rewards} [\cite{andrychowicz2017hindsight}].
 
 $\to$ \textbf{Limitation: Feedback Limitations and Learning Inefficiency}
 
-The effectiveness of closed-loop reasoning is **bottlenecked** by the capabilities of the low-level control policies and the fidelity of the language description provided by the perception system [15, 29]. Moreover, traditional RL systems often fail in large state spaces when faced with sparse rewards, often necessitating tedious and domain-specific **reward function engineering** [28].
+The effectiveness of closed-loop reasoning is **bottlenecked** by the capabilities of the low-level control policies and the fidelity of the 
+language description provided by the perception system [15, 29]. Moreover, traditional RL systems often fail in large state spaces when faced with 
+sparse rewards, often necessitating tedious and domain-specific **reward function engineering** [28].
 
 $\to$ \textbf{Your Approach: Robust Reinforcement Learning Integration}
 
-DPTA incorporates **Hindsight Experience Replay (HER)**, an advanced RL principle, to efficiently train universal policies that overcome the challenge of sparse rewards [28]. HER allows the system to **re-examine failed trajectories** with the retrospectively achieved state treated as a successful goal, thus harvesting information even from episodes that originally received a reward of $-1$ [28]. This enhances the policy learning component, ensuring the executed policies remain resilient and adaptable over time [28].
+DPTA incorporates **Hindsight Experience Replay (HER)**, an advanced RL principle, to efficiently train universal policies that overcome the challenge 
+of sparse rewards [28]. HER allows the system to **re-examine failed trajectories** with the retrospectively achieved state treated as a successful goal, 
+thus harvesting information even from episodes that originally received a reward of $-1$ [28]. This enhances the policy learning component, ensuring the 
+executed policies remain resilient and adaptable over time [28].
 \end{enumerate}
 
 % \subsection{Equations}

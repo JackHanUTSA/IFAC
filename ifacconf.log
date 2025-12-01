@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  1 DEC 2025 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  1 DEC 2025 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -187,24 +187,21 @@ Overfull \hbox (3.02466pt too wide) in paragraph at lines 111--111
  []
 
 
-Overfull \hbox (5.0115pt too wide) in paragraph at lines 165--166
-[]$\OMS/cmsy/m/n/10 !$ \OT1/cmr/bx/n/10 Your Ap-proach: Dy-namic Move-ment Prim-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2] (/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.bbl) [3] (/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux) ) 
+ [2] (/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.bbl) [3
+
+] (/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.aux) ) 
 Here is how much of TeX's memory you used:
- 2102 strings out of 478994
- 29243 string characters out of 5858184
- 334257 words of memory out of 5000000
- 19601 multiletter control sequences out of 15000+600000
+ 2119 strings out of 478994
+ 29648 string characters out of 5858184
+ 333554 words of memory out of 5000000
+ 19618 multiletter control sequences out of 15000+600000
  408782 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,7n,74p,663b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,7n,74p,366b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" (3 pages, 129800 bytes).
+Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/ifacconf.pdf" (3 pages, 130139 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
