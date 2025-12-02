@@ -126,7 +126,7 @@ primarily derived visually (e.g., YOLOv5 for object position)(\cite{liu2024enhan
 However, fine-grained tasks often depend on non-visual physical 
 feedback (e.g., force or torque required to open a tight hinge). 
 In DPTA, the Penetrative AI(\cite{xu2024penetrative}) paradigm is employed to process digitized sensor 
-signals** from the robot's end effector 
+signals from the robot's end effector 
 (e.g., force/torque sensors, joint current feedback)
 
 \begin{itemize}   
@@ -199,37 +199,33 @@ sparse rewards, often necessitating tedious and domain-specific \textbf{reward f
 
 \section{Architecture}
 
-Penetrative Trajectory Adaptation (DPTA) architecture is a composite framework that integrates Large Language Models 
-(LLMs) with specific sensing and control methodologies to address the limitations of grounding and trajectory generation in robotics.
- And we propoise in this digram %\includegraphics{IFAC.001.png}
-our primary layers:
+The \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework is a hierarchical robotic architecture that integrates large-scale language-based reasoning, physically grounded sensory interpretation, adaptive trajectory learning, and reinforcement learning. The system enables a robot to interpret natural language instructions, perceive through multimodal signals, and adapt its motion in real-world conditions (see Figure~\ref{fig:System}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=8.4cm]{IFAC.001.png} 
+\caption{DPTA System Architecture.}
+\label{fig:System}
+\end{center}
+\end{figure}
+
 \[
 \mathcal{A}_{\text{DPTA}} = 
 \{ \mathcal{L}_{\text{plan}}, \mathcal{L}_{\text{perc}}, 
 \mathcal{L}_{\text{exec}}, \mathcal{L}_{\text{learn}} \}.
 \]
 
-
-
-The Dynamic Penetrative Trajectory Adaptation (DPTA) framework is a hierarchical robotic architecture that integrates large-scale language-based reasoning, physically grounded sensory interpretation, adaptive trajectory learning, and reinforcement learning. The system enables a robot to interpret natural language instructions, perceive through multimodal signals, and adapt its motion in real-world conditions.
-
 \subsection{High-Level Reasoning and Planning Layer}
-At the highest level, a Large Language Model (LLM) serves as the central cognitive planner. Given a natural-language instruction (e.g., ``warm up my lunch''), the LLM performs long-horizon task decomposition and generates a structured sequence of sub-tasks. Each sub-task is mapped to motion primitives selected from a predefined Basic Motion Library.
-This hierarchical formulation allows complex goals to be broken into intermediate actions, which are subsequently instantiated via control functions (e.g., \texttt{move\_to\_pose}, \texttt{align\_gripper}, \texttt{apply\_force}). This layer supports generalized planning without task-specific programming.
+At the highest level, a Large Language Model (LLM) acts as the cognitive planner. Given a natural-language instruction (e.g., ``open the cabinet''), the LLM performs long-horizon task decomposition and generates a structured sequence of sub-tasks. Each sub-task is mapped to motion primitives from a predefined \emph{Basic Motion Library}, enabling generalized planning without task-specific programming.
 
 \subsection{Penetrative Perception Layer}
-Unlike vision-centric pipelines that rely solely on symbolic or labeled information, DPTA leverages Penetrative AI for physically grounded perception. In this layer, raw sensor signals (IMU sequences, tactile arrays, periodic biosignals, etc.) are directly fed into the LLM rather than intermediate or symbolic features. Using embedded world knowledge and numerical reasoning, the LLM interprets these signals to infer latent physical properties (e.g., material stiffness, friction, compliance, or slippage). This enables the architecture to detect micro-level physical properties that are difficult or impossible to capture using visual sensing alone.
+Unlike vision-centric pipelines, DPTA leverages \textit{Penetrative AI}~\cite{xu2024penetrative} to process raw sensor signals (e.g., joint torques, force/torque sensors). Using embedded knowledge and numerical reasoning, the LLM infers latent physical properties such as material stiffness, friction, compliance, or slippage. This enables detection of micro-level physical states that are difficult to capture visually.
 
 \subsection{Dynamic Execution Layer}
-For tasks that exceed the capabilities of predefined motion primitives, DPTA incorporates Dynamic Movement Primitives (DMPs) in combination with Human-Robot Collaboration (HRC). The system maintains a DMP Library storing parameterized, high-dimensional manipulation skills. When the LLM determines that a trajectory cannot be synthesized from the Basic Motion Library, the system allows a human operator to intervene via teleoperation.
-The demonstrated trajectory is encoded as a DMP using Gaussian basis functions and a corresponding weight vector. The resulting representation is added to the library for future reuse, enabling continual expansion of manipulation skills and reusable motor behaviors.
+When a task exceeds the capabilities of predefined motion primitives, DPTA employs \textit{Dynamic Movement Primitives (DMP)}~\cite{dmp} combined with \textit{Human-Robot Collaboration (HRC)}~\cite{hrc}. Demonstrated trajectories are encoded as DMPs and stored in a library for future reuse, allowing continual expansion of manipulation skills.
 
 \subsection{Robust Learning Layer}
-To ensure continual improvement in manipulation performance, DPTA integrates Hindsight Experience Replay (HER). Many manipulation tasks yield sparse binary rewards, which impede learning in standard reinforcement learning formulations. HER alleviates this challenge by relabeling unsuccessful episodes as successful transitions toward alternative goals. A replay buffer stores trajectories and reinterprets the achieved end-state as the desired goal. This implicit curriculum accelerates policy learning and improves robustness across failures, allowing the system to autonomously improve over time with minimal human supervision.
-
-
-
-
+To ensure continuous improvement, DPTA incorporates \textit{Hindsight Experience Replay (HER)}~\cite{her}. Sparse rewards in manipulation tasks are relabeled, allowing failed trajectories to contribute to learning alternative goals. This approach improves sample efficiency and policy robustness, enabling the system to autonomously adapt over time.
 
 \[
 \text{DPTA} = \mathcal{F}\big(
@@ -239,323 +235,24 @@ To ensure continual improvement in manipulation performance, DPTA integrates Hin
 \big)
 \]
 
-\[
-\text{DPTA} =
-\underbrace{\mathcal{P}_{\text{PenAI}}(s)}_{\text{Semantic Interpretation}}
-\;\Rightarrow\;
-\underbrace{\mathcal{T}_{\text{DMP/HRC}}(\cdot)}_{\text{Trajectory Generation}}
-\;\Rightarrow\;
-\underbrace{\mathcal{R}_{\text{RRL}}(\cdot)}_{\text{Policy Execution}}
-\]
-
-
-
-\section{Implementation Details} DPTA 
-Validation: Adaptive Cabinet Opening under Variable Friction
-
-
-\section{Experimental Validation of DPTA on a Cabinet-Opening Task}
-
-\subsection{Objective}
-The experiment aims to demonstrate that an LLM-based system can adapt a learned Dynamic Movement Primitive (DMP) to varying physical constraints (e.g., a stuck or heavy drawer) by interpreting penetrative, non-visual sensor data (joint torques and forces). Visual-only planners are expected to fail under these conditions, whereas the DPTA framework leverages this additional sensory information for robust adaptation.
-
-\subsection{Apparatus and Environment}
-\begin{itemize}
-    \item \textbf{Robot:} UFactory Lite 6, simulated in NVIDIA Isaac Sim and validated on the real robot for demonstration.
-    \item \textbf{Control Software:} UFactory Studio for Human-Robot Collaboration (HRC) and trajectory recording.
-    \item \textbf{Simulation Engine:} NVIDIA Isaac Sim / Isaac Gym for physics simulation and massive parallel training.
-    \item \textbf{Task:} ``Open the Cabinet''.
-    \item \textbf{Variable Parameters:} Friction coefficient of the cabinet slide and mass of the cabinet door.
-\end{itemize}
-
-\subsection{Methodology}
-
-\subsubsection{Phase 1: Trajectory Acquisition via HRC}
-\textbf{Goal:} Acquire the base DMP.
-
-\textbf{Procedure:}
-\begin{enumerate}
-    \item Set the UFactory Lite 6 to Manual (Teach) Mode with gravity compensation.
-    \item A human operator guides the robot to grasp and open the cabinet, producing the ``Golden Trajectory''.
-    \item Record joint positions and velocities at 250 Hz using UFactory Studio.
-    \item Encode the recorded trajectory into a DMP using Gaussian basis functions to create a flexible, parameterized motion primitive. This constitutes the \emph{Base Skill} stored in the library.
-\end{enumerate}
-
-\subsubsection{Phase 2: Penetrative Simulation Environment}
-\textbf{Goal:} Simulate invisible physical constraints and expose penetrative sensor signals.
-
-\textbf{Setup:}
-\begin{enumerate}
-    \item Import the UFactory Lite 6 URDF into Isaac Sim.
-    \item Create a \emph{Cabinet} asset.
-    \item Randomize cabinet joint physics to vary friction and damping (simulating ``stuck'' or ``heavy'' conditions).
-    \item Expose joint torques and rigid-body force tensors to the Python interface as digitized sensor signals for the LLM.
-\end{enumerate}
-
-\subsubsection{Phase 3: DPTA Loop Implementation}
-The experiment compares a standard LLM planner against the DPTA framework.
-
-\paragraph{A. High-Level Planner}
-The LLM receives the command \emph{``Open the cabinet''} and decomposes it into sub-tasks:
-\[
-\text{move\_to(handle)} \rightarrow \text{grasp()} \rightarrow \text{pull()}.
-\]
-
-\paragraph{B. Penetrative Perception (Differentiator)}
-\begin{itemize}
-    \item \textbf{Baseline:} Standard planners attempt the DMP without torque feedback. High friction causes stalling or gripper slip, and the visual system may incorrectly retry the same action.
-    \item \textbf{DPTA:} 
-        \begin{enumerate}
-            \item Feed digitized torque/force sequences into the LLM.
-            \item Prompt includes expert knowledge: e.g., ``High torque spikes with low velocity indicate a stuck mechanism.''
-            \item LLM reasoning (inner monologue): Detects abnormal resistance and outputs an adaptation strategy (e.g., increase DMP gain, apply a wiggle motion).
-        \end{enumerate}
-\end{itemize}
-
-\subsubsection{Phase 4: Robust Learning with HER}
-\begin{itemize}
-    \item Run 4,096 parallel environments in Isaac Gym.
-    \item Slippage or partial success is stored using Hindsight Experience Replay (HER). For example, failing to open the drawer but maintaining the grasp is relabeled as a success for \emph{grasping}.
-    \item The replay buffer refines the low-level controller, ensuring that the DMP can adapt to high-resistance situations.
-\end{itemize}
-
-\subsection{Evaluation Metrics}
-\begin{enumerate}
-    \item \textbf{Success Rate:} Percentage of successful openings across friction values from 0.1 to 1.0. Hypothesis: Standard planners fail at high friction; DPTA maintains high success.
-    \item \textbf{Adaptation Time:} Steps or seconds until the LLM detects a ``stuck'' state and adapts.
-    \item \textbf{Token Efficiency:} Ability of raw torque/force sequences to inform the LLM about physical state (Stuck vs. Heavy vs. Locked).
-\end{enumerate}
-
-\subsection{Expected Outcome}
-Visual grounding indicates \emph{what} to manipulate, whereas the penetrative perception layer determines \emph{how} to manipulate dynamically. Human-Robot Collaboration provides the kinematic baseline (DMP) that code-generation alone cannot reliably produce for complex curves. The DPTA framework is expected to robustly adapt motion primitives to varying physical constraints that would otherwise cause standard planners to fail.
-
-
-
-
-
-
-
-% \subsection{Equations}
-
-% Some words might be appropriate describing equation~(\ref{eq:sample}), if 
-% we had but time and space enough. 
-
-% \begin{equation} \label{eq:sample}
-% {{\partial F}\over {\partial t}} = D{{\partial^2 F}\over {\partial x^2}}.
-% \end{equation}
-
-% See \cite{Abl:56}, \cite{AbTaRu:54}, \cite{Keo:58} and \cite{Pow:85}.
-
-% \subsubsection{Example.} This equation goes far beyond the
-% celebrated theorem ascribed to the great Pythagoras by his followers.
-
-% \begin{thm}   % use the thm environment for theorems
-% The square of the length of the hypotenuse of a right triangle equals
-% the sum of the squares of the lengths of the other two sides.
-% \end{thm}
-
-% \begin{pf}    % and the pf environment for proofs
-% The square of the length of the hypotenuse of a right triangle equals the sum of the squares 
-% of the lengths of the other two sides.
-% \end{pf}
-
-% %% There are a number of predefined theorem-like environments in
-% %% ifacconf.cls:
-% %%
-% %% \begin{thm} ... \end{thm}            % Theorem
-% %% \begin{lem} ... \end{lem}            % Lemma
-% %% \begin{claim} ... \end{claim}        % Claim
-% %% \begin{conj} ... \end{conj}          % Conjecture
-% %% \begin{cor} ... \end{cor}            % Corollary
-% %% \begin{fact} ... \end{fact}          % Fact
-% %% \begin{hypo} ... \end{hypo}          % Hypothesis
-% %% \begin{prop} ... \end{prop}          % Proposition
-% %% \begin{crit} ... \end{crit}          % Criterion
-
-% Of course LaTeX manages equations through built-in macros. You may
-% wish to use the \texttt{amstex} package for enhanced math
-% capabilities.
-
-% \subsection{Figures}
-
-% To insert figures, use the \texttt{graphicx} package. Although other
-% graphics packages can also be used, \texttt{graphicx} is simpler to
-% use. See  Fig.~\ref{fig:bifurcation} for an example.
-
-% \begin{figure}
-% \begin{center}
-% \includegraphics[width=8.4cm]{bifurcation}    % The printed column width is 8.4 cm.
-% \caption{Bifurcation: Plot of local maxima of $x$ with damping $a$ decreasing} 
-% \label{fig:bifurcation}
-% \end{center}
-% \end{figure}
-
-% Figures must be centered, and have a caption at the bottom. 
-
-% \subsection{Tables}
-% Tables must be centered and have a caption above them, numbered with
-% Arabic numerals. See table~\ref{tb:margins} for an example.
-
-% \begin{table}[hb]
-% \begin{center}
-% \caption{Margin settings}\label{tb:margins}
-% \begin{tabular}{cccc}
-% Page & Top & Bottom & Left/Right \\\hline
-% First & 3.5 & 2.5 & 1.5 \\
-% Rest & 2.5 & 2.5 & 1.5 \\ \hline
-% \end{tabular}
-% \end{center}
-% \end{table}
-
-% \subsection{Final Stage}
-
-% Authors are expected to mind the margins diligently.  Papers need to
-% be stamped with event data and paginated for inclusion in the
-% proceedings. If your manuscript bleeds into margins, you will be
-% required to resubmit and delay the proceedings preparation in the
-% process.
-
-% \subsubsection{Page margins.} See table~\ref{tb:margins} for the
-% page margins specification. All dimensions are in \emph{centimeters}.
-
-
-% \subsection{PDF Creation}
-
-% All fonts must be embedded/subsetted in the PDF file. Use one of the
-% following tools to produce a good quality PDF file:
-
-% \subsubsection{PDFLaTeX} is a special version of LaTeX by Han The
-% Thanh which produces PDF output directly using Type-1 fonts instead of
-% the standard \texttt{dvi} file. It accepts figures in JPEG, PNG, and PDF
-% formats, but not PostScript. Encapsulated PostScript figures can be
-% converted to PDF with the \texttt{epstopdf} tool or with Adobe Acrobat
-% Distiller.
-
-% \subsubsection{Generating PDF from PostScript} is the classical way of
-% producing PDF files from LaTeX. The steps are:
-
-% \begin{enumerate}
-%   \item Produce a \texttt{dvi} file by running \texttt{latex} twice.
-%   \item Produce a PostScript (\texttt{ps}) file with \texttt{dvips}.
-%   \item Produce a PDF file with \texttt{ps2pdf} or Adobe Acrobat
-%   Distiller.
-% \end{enumerate}
-
-% \subsection{Copyright Form}
-
-% IFAC will put in place an electronic copyright transfer system in due
-% course. Please \emph{do not} send copyright forms by mail or fax. More
-% information on this will be made available on IFAC website.
-
-
-% \section{Units}
-
-% Use SI as primary units. Other units may be used as secondary units
-% (in parentheses). This applies to papers in data storage. For example,
-% write ``$15\,\mathrm{Gb}/\mathrm{cm}^2$ ($100\,\mathrm{Gb}/\mathrm{in}^2$)''. 
-% An exception is when
-% English units are used as identifiers in trade, such as ``3.5 in
-% disk drive''. Avoid combining SI and other units, such as current in
-% amperes and magnetic field in oersteds. This often leads to confusion
-% because equations do not balance dimensionally. If you must use mixed
-% units, clearly state the units for each quantity in an equation.  The
-% SI unit for magnetic field strength $\mathbf{H}$ is $\mathrm{A}/\mathrm{m}$. However, if you wish to
-% use units of $\mathrm{T}$, either refer to magnetic flux density $\mathbf{B}$ or
-% magnetic field strength symbolized as $\mu_0\,\mathbf{H}$. Use the center dot to
-% separate compound units, e.g., ``$\mathrm{A} \cdot \mathrm{m}^2$''.
-
-% \section{Helpful Hints}
-
-% \subsection{Figures and Tables}
-
-% Figure axis labels are often a source of confusion. Use words rather
-% than symbols. As an example, write the quantity ``Magnetization'', or
-% ``Magnetization M'', not just ``M''. Put units in parentheses. Do not
-% label axes only with units.  For example, write ``Magnetization
-% ($\mathrm{A}/\mathrm{m}$)'' or ``Magnetization ($\mathrm{A} \mathrm{m}^{-1}$)'', not just
-%  ``$\mathrm{A}/\mathrm{m}$''. Do not
-% label axes with a ratio of quantities and units. For example, write
-% ``Temperature ($\mathrm{K}$)'', not ``$\mbox{Temperature}/\mathrm{K}$''.
-
-% Multipliers can be especially confusing. Write ``Magnetization
-% ($\mathrm{kA}/\mathrm{m}$)'' or ``Magnetization ($10^3 \mathrm{A}/\mathrm{m}$)''. Do not write
-% ``Magnetization $(\mathrm{A}/\mathrm{m}) \times 1000$'' because the reader would not know
-% whether the axis label means $16000\,\mathrm{A}/\mathrm{m}$ or $0.016\,\mathrm{A}/\mathrm{m}$.
-
-% \subsection{References}
-
-% Use Harvard style references (see at the end of this document). With
-% \LaTeX, you can process an external bibliography database 
-% using \texttt{bibtex},\footnote{In this case you will also need the \texttt{ifacconf.bst}
-% file, which is part of the \texttt{ifaconf} package.}
-% or insert it directly into the reference section. Footnotes should be avoided as
-% far as possible.  Please note that the references at the end of this
-% document are in the preferred referencing style. Papers that have not
-% been published should be cited as ``unpublished''.  Capitalize only the
-% first word in a paper title, except for proper nouns and element
-% symbols.
-
-% \subsection{Abbreviations and Acronyms}
-
-% Define abbreviations and acronyms the first time they are used in the
-% text, even after they have already been defined in the
-% abstract. Abbreviations such as IFAC, SI, ac, and dc do not have to be
-% defined. Abbreviations that incorporate periods should not have
-% spaces: write ``C.N.R.S.'', not ``C. N. R. S.'' Do not use abbreviations
-% in the title unless they are unavoidable (for example, ``IFAC'' in the
-% title of this article).
-
-% \subsection{Equations}
-
-% Number equations consecutively with equation numbers in parentheses
-% flush with the right margin, as in (\ref{eq:sample}).  To make your equations more
-% compact, you may use the solidus ($/$), the $\exp$ function, or
-% appropriate exponents. Use parentheses to avoid ambiguities in
-% denominators. Punctuate equations when they are part of a sentence, as
-% in
-
-% \begin{equation} \label{eq:sample2}
-% \begin{array}{ll}
-% \int_0^{r_2} & F (r, \varphi ) dr d\varphi = [\sigma r_2 / (2 \mu_0 )] \\
-% & \cdot \int_0^{\inf} exp(-\lambda |z_j - z_i |) \lambda^{-1} J_1 (\lambda  r_2 ) J_0 (\lambda r_i ) d\lambda 
-% \end{array}
-% \end{equation}
-
-% Be sure that the symbols in your equation have been defined before the
-% equation appears or immediately following. Italicize symbols ($T$
-% might refer to temperature, but T is the unit tesla). Refer to
-% ``(\ref{eq:sample})'', not ``Eq. (\ref{eq:sample})'' or ``equation
-% (\ref{eq:sample})'', except at the beginning of a sentence: ``Equation
-% (\ref{eq:sample}) is \ldots''.
-
-% \subsection{Other Recommendations}
-
-% Use one space after periods and colons. Hyphenate complex modifiers:
-% ``zero-field-cooled magnetization''. Avoid dangling participles, such
-% as, ``Using (1), the potential was calculated'' (it is not clear who or
-% what used (1)). Write instead: ``The potential was calculated by using
-% (1)'', or ``Using (1), we calculated the potential''.
-
-% A parenthetical statement at the end of a sentence is punctuated
-% outside of the closing parenthesis (like this). (A parenthetical
-% sentence is punctuated within the parentheses.) Avoid contractions;
-% for example, write ``do not'' instead of ``don' t''. The serial comma
-% is preferred: ``A, B, and C'' instead of ``A, B and C''.
-
+---
 
 \section{Conclusion}
 
-\section{Conclusion}
+This work introduces the \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework, a novel architecture bridging 
+high-level semantic planning and low-level dynamic control in embodied agents. While LLMs provide broad world knowledge 
+capable of decomposing abstract tasks, they lack real-world experience and physical grounding, often generating plans that 
+are plausible but not executable. DPTA addresses these limitations by synthesizing \textit{Penetrative AI}~\cite{xu2024penetrative}, \textit{Dynamic Movement Primitives (DMP)}~\cite{dmp}, and \textit{Hindsight Experience Replay (HER)}~\cite{her} into a cohesive system.
 
-This work introduces the \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework, a novel architecture designed to bridge the critical gap between high-level semantic planning and low-level dynamic control in embodied agents. While Large Language Models (LLMs) possess vast world knowledge capable of decomposing abstract tasks into mid-level plans, they inherently lack real-world experience and physical grounding, often resulting in plans that are plausible but not executable. \textbf{DPTA} addresses these limitations by synthesizing \textit{Penetrative AI}, \textit{Dynamic Movement Primitives (DMP)}, and \textit{Hindsight Experience Replay (HER)} into a cohesive system.
+First, DPTA enhances perception by leveraging Penetrative AI to interpret digitized sensor signals such as force and 
+torque, enabling inference of micro-level physical states (e.g., hinge stiffness, surface friction). Second,
+ it addresses the limitations of rigid code generation by parameterizing DMPs through Human-Robot Collaboration (HRC), 
+ ensuring kinematically sound and human-like motions. Finally, robust learning through HER allows the system to learn from failure, improving policy performance in high-dimensional state spaces.
 
-First, DPTA advances the perception capabilities of robotic agents by adopting the \textit{Penetrative AI} paradigm. Unlike traditional systems that rely primarily on visual-language models (VLMs) which may miss invisible physical properties, DPTA enables the LLM to interpret digitized sensor signals (such as force and torque data) directly. This allows the planner to deduce micro-level physical states—such as mechanism stiffness or surface friction—providing the deep physical context necessary for complex manipulation.
+In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing ``Feel'' and ``Adapt''
+ capabilities. By grounding semantic intent in penetrative sensory data and leveraging both stored motion primitives 
+ and learned behaviors, DPTA enables embodied agents to plan logically and interact physically with nuance and adaptability.
 
-Second, we address the limitations of rigid code generation and open-loop planning. While approaches like \textit{Code as Policies} can express logic and geometric reasoning, they struggle to synthesize complex, adaptive trajectory curves from scratch. By utilizing \textit{Dynamic Movement Primitives (DMP)} acquired through \textit{Human-Robot Collaboration (HRC)}, DPTA ensures that the robot's motions are kinematically sound and human-like. The LLM acts as a high-level orchestrator that parameterizes these primitives based on the penetrative sensory feedback, rather than attempting to generate low-level control laws directly.
-
-Finally, DPTA enhances system robustness through \textit{Hindsight Experience Replay (HER)}. Traditional reinforcement learning struggles with the sparse, binary rewards typical of manipulation tasks. By allowing the agent to learn from failure—treating achieved states in failed trajectories as successful goals—HER significantly improves sample efficiency and policy robustness in high-dimensional state spaces.
-
-In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing a ``Feel'' and ``Adapt'' capability. By grounding semantic intent in penetrative sensory data and robust motion primitives, DPTA offers a path toward embodied agents that can not only plan logically but also interact physically with the nuance and adaptability required for real-world deployment.
 
 
 \clearpage
