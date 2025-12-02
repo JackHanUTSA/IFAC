@@ -176,19 +176,12 @@ observations (e.g., success detection or scene description updates) back into th
 dynamically re-plan actions [huang2023inner]. In the domain of reinforcement learning (RL), solving robotic tasks often faces the critical challenge of 
 \textbf{sparse and binary rewards} [\cite{andrychowicz2017hindsight}].
 
-$\to$ \textbf{Limitation: Feedback Limitations and Learning Inefficiency}
+\textbf{Limitation: Feedback Limitations and Learning Inefficiency}
 
 The effectiveness of closed-loop reasoning is **bottlenecked** by the capabilities of the low-level control policies and the fidelity of the 
 language description provided by the perception system [15, 29]. Moreover, traditional RL systems often fail in large state spaces when faced with 
 sparse rewards, often necessitating tedious and domain-specific **reward function engineering** [28].
 
-$\to$ \textbf{Your Approach: Robust Reinforcement Learning Integration}
-
-DPTA incorporates **Hindsight Experience Replay (HER)**, an advanced RL principle, to efficiently train universal policies that overcome the challenge 
-of sparse rewards [28]. HER allows the system to **re-examine failed trajectories** with the retrospectively achieved state treated as a successful goal, 
-thus harvesting information even from episodes that originally received a reward of $-1$ [28]. This enhances the policy learning component, ensuring the 
-executed policies remain resilient and adaptable over time [28].
-\end{enumerate}
 
 % \subsection{Equations}
 
