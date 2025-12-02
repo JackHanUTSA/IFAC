@@ -200,7 +200,8 @@ sparse rewards, often necessitating tedious and domain-specific \textbf{reward f
 \section{Architecture}
 
 Penetrative Trajectory Adaptation (DPTA) architecture is a composite framework that integrates Large Language Models 
-(LLMs) with specific sensing and control methodologies to address the limitations of grounding and trajectory generation in robotics. And we propoise in this digram \includegraphics{IFAC.001.png}
+(LLMs) with specific sensing and control methodologies to address the limitations of grounding and trajectory generation in robotics.
+ And we propoise in this digram %\includegraphics{IFAC.001.png}
 our primary layers:
 \[
 \mathcal{A}_{\text{DPTA}} = 
@@ -543,6 +544,19 @@ Visual grounding indicates \emph{what} to manipulate, whereas the penetrative pe
 
 
 \section{Conclusion}
+
+\section{Conclusion}
+
+This work introduces the \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework, a novel architecture designed to bridge the critical gap between high-level semantic planning and low-level dynamic control in embodied agents. While Large Language Models (LLMs) possess vast world knowledge capable of decomposing abstract tasks into mid-level plans, they inherently lack real-world experience and physical grounding, often resulting in plans that are plausible but not executable. \textbf{DPTA} addresses these limitations by synthesizing \textit{Penetrative AI}, \textit{Dynamic Movement Primitives (DMP)}, and \textit{Hindsight Experience Replay (HER)} into a cohesive system.
+
+First, DPTA advances the perception capabilities of robotic agents by adopting the \textit{Penetrative AI} paradigm. Unlike traditional systems that rely primarily on visual-language models (VLMs) which may miss invisible physical properties, DPTA enables the LLM to interpret digitized sensor signals (such as force and torque data) directly. This allows the planner to deduce micro-level physical states—such as mechanism stiffness or surface friction—providing the deep physical context necessary for complex manipulation.
+
+Second, we address the limitations of rigid code generation and open-loop planning. While approaches like \textit{Code as Policies} can express logic and geometric reasoning, they struggle to synthesize complex, adaptive trajectory curves from scratch. By utilizing \textit{Dynamic Movement Primitives (DMP)} acquired through \textit{Human-Robot Collaboration (HRC)}, DPTA ensures that the robot's motions are kinematically sound and human-like. The LLM acts as a high-level orchestrator that parameterizes these primitives based on the penetrative sensory feedback, rather than attempting to generate low-level control laws directly.
+
+Finally, DPTA enhances system robustness through \textit{Hindsight Experience Replay (HER)}. Traditional reinforcement learning struggles with the sparse, binary rewards typical of manipulation tasks. By allowing the agent to learn from failure—treating achieved states in failed trajectories as successful goals—HER significantly improves sample efficiency and policy robustness in high-dimensional state spaces.
+
+In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing a ``Feel'' and ``Adapt'' capability. By grounding semantic intent in penetrative sensory data and robust motion primitives, DPTA offers a path toward embodied agents that can not only plan logically but also interact physically with the nuance and adaptability required for real-world deployment.
+
 
 \clearpage
 \printbibliography
