@@ -50,9 +50,20 @@ In order to achieve the goal we demo a method by utlize LLMs(large language mode
 Our idea focuses on using an LLM's capacity for precise, short-horizon physical reasoning to 
 dynamically select or modify the parameters of complex, learned robotic trajectories, 
 effectively allowing the robot to autonomously execute tasks that previously required initial human intervention.
-The conceptual framework of Dynamic Penetrative Trajectory Adaptation (DPTA) represents a synthesis of three distinct advanced AI paradigms found in the sources: Penetrative AI (LLM sensor comprehension), 
-Dynamic Movement Primitives (DMP) and Human-Robot Collaboration (HRC) for trajectory learning, 
-and Robust Reinforcement Learning (RL) for policy optimization and action excution.
+The conceptual framework of \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)}
+represents a synthesis of three complementary AI paradigms. 
+First, \textit{Penetrative AI} enables contextual and semantic understanding by
+leveraging large language model-based sensor comprehension for high-level intent extraction
+and environmental interpretation. 
+Second, the combination of \textit{Dynamic Movement Primitives (DMP)} and 
+\textit{Human–Robot Collaboration (HRC)} contributes to adaptable trajectory generation
+through shared autonomy, interactive learning, and human demonstration. 
+Third, \textit{Robust Reinforcement Learning (RL)} performs policy optimization and
+closed-loop execution under uncertainty, ensuring real-time correction and robust action
+adaptation. 
+Together, these three paradigms form the foundation of the DPTA framework, enabling 
+semantic reasoning, dynamic motion modification, and reliable trajectory shaping in complex 
+robotic environments.
 
 
 
@@ -176,14 +187,56 @@ observations (e.g., success detection or scene description updates) back into th
 dynamically re-plan actions [huang2023inner]. In the domain of reinforcement learning (RL), solving robotic tasks often faces the critical challenge of 
 \textbf{sparse and binary rewards} [\cite{andrychowicz2017hindsight}].
 
-\item \textbf{Limitation: Feedback Limitations and Learning Inefficiency}
+\item \textbf{Feedback Limitations and Learning Inefficiency}
 
 The effectiveness of closed-loop reasoning is \textbf{bottlenecked} by the capabilities of the low-level control policies and the fidelity of the 
-language description provided by the perception system [15, 29]. Moreover, traditional RL systems often fail in large state spaces when faced with 
-sparse rewards, often necessitating tedious and domain-specific **reward function engineering** [28].
+language description provided by the perception system [\cite{gal2016dropout}, \cite{ebert2018internet}]. Moreover, traditional RL systems often fail in large state spaces when faced with 
+sparse rewards, often necessitating tedious and domain-specific \textbf{reward function engineering} [\cite{andrychowicz2017hindsight}].
 
 
 \end{enumerate}
+
+
+\section{Architecture}
+
+Penetrative Trajectory Adaptation (DPTA) architecture is a composite framework that integrates Large Language Models 
+(LLMs) with specific sensing and control methodologies to address the limitations of grounding and trajectory generation in robotics. And we propoise 
+our primary layers:
+\begin{itemize}
+\item \textbf{High-Level Reasoning and Planning Layer:} At the top level, an LLM (such as GPT-4) functions as the central task planner. It is responsible for inter
+preting high-level natural language commands (e.g., "warm up my lunch") and decomposing them into a sequence of actionable sub-tasks or motion functions.
+
+
+
+
+
+
+
+
+
+\[
+\text{DPTA} = \mathcal{F}\big(
+    \mathcal{P}_{\text{PenAI}},\;
+    \mathcal{T}_{\text{DMP/HRC}},\;
+    \mathcal{R}_{\text{RRL}}
+\big)
+\]
+
+\[
+\text{DPTA} =
+\underbrace{\mathcal{P}_{\text{PenAI}}(s)}_{\text{Semantic Interpretation}}
+\;\Rightarrow\;
+\underbrace{\mathcal{T}_{\text{DMP/HRC}}(\cdot)}_{\text{Trajectory Generation}}
+\;\Rightarrow\;
+\underbrace{\mathcal{R}_{\text{RRL}}(\cdot)}_{\text{Policy Execution}}
+\]
+
+
+
+
+
+
+
 
 % \subsection{Equations}
 

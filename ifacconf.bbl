@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -36,6 +36,21 @@ Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.D., Dhariwal, P.,
 \newblock Language models are few-shot learners.
 \newblock \emph{Advances in neural information processing systems}, 33,
   1877--1901.
+
+\bibitem[{Ebert et~al.(2018)Ebert, Van~Daele, Nordgreen, Karekla, Compare,
+  Zarbo, Brugnera, {\O}verland, Trebbi, Jensen et~al.}]{ebert2018internet}
+Ebert, D.D., Van~Daele, T., Nordgreen, T., Karekla, M., Compare, A., Zarbo, C.,
+  Brugnera, A., {\O}verland, S., Trebbi, G., Jensen, K.L., et~al. (2018).
+\newblock Internet-and mobile-based psychological interventions: applications,
+  efficacy, and potential for improving mental health.
+\newblock \emph{European Psychologist}.
+
+\bibitem[{Gal and Ghahramani(2016)}]{gal2016dropout}
+Gal, Y. and Ghahramani, Z. (2016).
+\newblock Dropout as a bayesian approximation: Representing model uncertainty
+  in deep learning.
+\newblock In \emph{international conference on machine learning}, 1050--1059.
+  PMLR.
 
 \bibitem[{Huang et~al.(2022)Huang, Abbeel, Pathak, and
   Mordatch}]{huang2022language}
