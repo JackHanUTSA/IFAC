@@ -6,6 +6,9 @@
 % Copyright (c) 2025 International Federation of Automatic Control
 %===============================================================================
 \documentclass{ifacconf}
+\usepackage{stfloats}    % allows better placement for wide floats
+% and then:
+
 
 \usepackage{graphicx}      % include this line if your document contains figures
 \usepackage{natbib}        % required for bibliography
@@ -201,13 +204,13 @@ sparse rewards, often necessitating tedious and domain-specific \textbf{reward f
 
 The \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework is a hierarchical robotic architecture that integrates large-scale language-based reasoning, physically grounded sensory interpretation, adaptive trajectory learning, and reinforcement learning. The system enables a robot to interpret natural language instructions, perceive through multimodal signals, and adapt its motion in real-world conditions (see Figure~\ref{fig:System}).
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=8.4cm]{IFAC.001.png} 
-\caption{DPTA System Architecture.}
+\begin{figure*}[!t]
+   % also try [h], [tb], [!t], etc.
+\centering
+\includegraphics[width=\textwidth]{IFAC.001.png}
+\caption{System demonstration across full page width.}
 \label{fig:System}
-\end{center}
-\end{figure}
+\end{figure*}
 
 \[
 \mathcal{A}_{\text{DPTA}} = 
