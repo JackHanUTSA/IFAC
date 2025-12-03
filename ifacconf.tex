@@ -8,10 +8,13 @@
 \documentclass{ifacconf}
 \usepackage{stfloats}    % allows better placement for wide floats
 % and then:
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[backend=biber]{biblatex}
 
+\addbibresource{ifacconf.bib}
 
 \usepackage{graphicx}      % include this line if your document contains figures
-\usepackage{natbib}        % required for bibliography
 %===============================================================================
 \begin{document}
 \begin{frontmatter}
@@ -19,9 +22,7 @@
 \title{Dynamic Penetrative Trajectory Adaptation\thanksref{footnoteinfo}} 
 % Title, preferably not more than 10 words.
 
-\thanks[footnoteinfo]{Sponsor and financial support acknowledgment
-goes here. Paper titles should be written in uppercase and lowercase
-letters, not all uppercase.}
+\thanks[footnoteinfo]{This work was supported in part by the U.S. National Science Foundation (NSF) under Award No. 1826086.}
 
 \author[First]{Zhifeng Han. Author} 
 \author[Second]{Clarire Walton. Author, Jr.} 
@@ -272,10 +273,6 @@ In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing `
 
 % \section*{DECLARATION OF GENERATIVE AI AND AI-ASSISTED TECHNOLOGIES IN THE WRITING PROCESS}
 % During the preparation of this work the author(s) used [NAME TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.
-
-
-\bibliography{ifacconf}             % bib file to produce the bibliography
-                                                     % with bibtex (preferred)
                                                    
 %\begin{thebibliography}{xx}  % you can also add the bibliography by hand
 
