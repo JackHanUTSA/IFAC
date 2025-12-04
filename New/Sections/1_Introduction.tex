@@ -1,36 +1,22 @@
 \section{Introduction}\label{introduction}
-This paper considers the following nonlinear system
-\begin{eqnarray}\label{1}
-	\left\{
-	\begin{array}{l}
-		\dot{x}_{i}=x_{i+1}+f_{i}\left( x_{1},\ldots ,x_{i}\right),~i=1,\ldots,n-1,   \\
-		\dot{x}_{n}=u+f_{n}\left( x_{1},\ldots,x_{n}\right) +d\left( t,x\right), 
-	\end{array}
-	\right.
-\end{eqnarray}
-where $x = (x_1,\ldots, x_n)^T  \in \mathbb{R}^n$ and $u \in \mathbb{R}$ are the system states and control input, respectively. In addition, $ f_i(\cdot),~i=1,\ldots,n$ are system nonlinearities and $d\left(t,x\right)$ represents the unknown perturbation. System (\ref{1}) are widely used to describe dynamics of numerous practical systems in practice \cite{QianCJTAC2001,ChenXDIJC2020}. For example, a pendulum system is described by 
-\begin{eqnarray*}
-	\left\{
-	\begin{array}{l}
-		\dot x_1 = x_2, \\
-		\dot x_2 = \frac{1}{J}u - \frac{MgL}{2J}\mathrm{sin}(x_1) + d(t,x),
-	\end{array}
-	\right.
-\end{eqnarray*}
-where $x_1$ is the angle of oscillation, $x_2$ is the angler velocity, $M, g, L$ and $J$ are system parameters, and $d(t,x)$ represents various uncertainties.
-In this paper, we are interested in solving the problem of global regulation control for system (\ref{1}) in the presence of  uncertainties. More specifically, we aim to design controllers under which the states of system (\ref{1}) are globally bounded and converge to the origin \cite{LiuYGSIAM2013,PongSIAM2009}.
-When $d(t,x) = 0$, many important results have been obtained \cite{QianCJTAC2001,ZhangXFIJSS2005,HuaCCTAC2017,ZhaWTAC2016,ZhouJSP2008}. The nonlinear system (\ref{1}) with known differentiable non-linearity $f_i$'s can be globally stabilized by the backstepping approach \cite{SepulchreRSpringer1997}. In the case when $f_i$'s are unknown satisfying a linear growth condition, a domination approach was proposed in \cite{TsiniasJSCL1991} to obtain a linear controller. In the case when $f_i$'s only satisfy a H\"{o}lder growth condition, a design methodology called adding a power integrator was proposed in work \cite{QianCJIJRNC2007} to globally stabilize the nonlinear system (\ref{1}). 
-In the presence of non-vanishing uncertainties, i.e., $d(t,0) \neq 0$, the aforementioned results cannot guarantee that all states of the nonlinear system (\ref{1}) converge to the origin. When $f_i$ is linear $ ~i=1, \dots n$, and $d(t,x) = \theta$ for an unknown constant $\theta$, system (\ref{1}) can be regulated by the commonly-used PID controller \cite{DorfRCP2011}
-\begin{eqnarray}\label{1.3}
-\begin{array}{l}
-u(t) = -k_0\int_{0}^{t}x_1(s)ds -k_1x_1(t)-\cdots - k_nx_n(t),
-\end{array}
-\end{eqnarray}
-where positive gains $k_0, \dots, k_n$ are coefficients of Hurwitz polynomial $s^{n+1}+ k_ns^n+k_{n-1}s^{n-1}+\dots +k_1s+k_0$ \cite{JafarovEMTCST2004,DwyerAO2009,ChenXDIJRNC2019,KrishnamurthyPTAC2003}. The corrective term $\int_{0}^{t}x_1(s)ds$ can counteract the effect of a constant disturbance but also will cause a trade-off between stability and convergence rate \cite{DorfRCP2011}, i.e., a larger $k_0$ desired for a faster convergence rate may cause instability. Moreover, the controller (\ref{1.3}) cannot handle exogenous time-varying disturbances, e.g., $d(t,x) = c(1+0.5\mathrm{sin}(t))$ with an unknown magnitude $c$, which drive the states $x_1$ and $x_2$ away from origin. The performance of the PID controller will be even worse when $d(t,x)$ is an internal modeling uncertainty such as $d(t,x) = \theta (1+ x_2^2)$ with unknown parameter $\theta$. 
-
-
-
-
-In this paper, a novel integral controller consisting of a integral dynamic  is proposed to solve the global regulation problem of system (\ref{1}) with various non-vanishing uncertainties.  First, an extra integral state in the control law is introduced to tackle $d(t, x)$. By revamping the technique of adding a power integrator \cite{QianCJIJRNC2007}, a linear control law with a linear corrective term is constructed to handle the various forms of uncertainties. The proposed integral controller will globally regulate the $n$-dimensional system in the presence of not-precisely-known non-linearities and non-vanishing uncertainties.
-
+interactive robots mission is a complex mission it need to nagvigate in complex and 
+dynamic environment also need to fully flexable to planing the sequentially sub tasks. 
+In order to achieve the goal we demo a method by utlize LLMs(large language model) and Reenforcement Learning. 
+Our idea focuses on using an LLM's capacity for precise, short-horizon physical reasoning to 
+dynamically select or modify the parameters of complex, learned robotic trajectories, 
+effectively allowing the robot to autonomously execute tasks that previously required initial human intervention.
+The conceptual framework of \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)}
+represents a synthesis of three complementary AI paradigms. 
+First, Penetrative AI enables contextual and semantic understanding by
+leveraging large language model-based sensor comprehension for high-level intent extraction
+and environmental interpretation. 
+Second, the combination of Dynamic Movement Primitives (DMP) and 
+Human–Robot Collaboration (HRC) contributes to adaptable trajectory generation
+through shared autonomy, interactive learning, and human demonstration. 
+Third, Robust Reinforcement Learning (RL) performs policy optimization and
+closed-loop execution under uncertainty, ensuring real-time correction and robust action
+adaptation. 
+Together, these three paradigms form the foundation of the DPTA framework, enabling 
+semantic reasoning, dynamic motion modification, and reliable trajectory shaping in complex 
+robotic environments.
 

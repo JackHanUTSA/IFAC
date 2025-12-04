@@ -1,4 +1,15 @@
 
 \section{Conclusion}
-This paper has presented a new method to design a integral controller to regulate the states of a class of uncertain nonlinear systems. Compared to the traditional PID controller, our proposed controller can handle more general uncertainties beyond constant step disturbance, such as external time-varying disturbances with unknown magnitudes and internal modeling uncertainties due to unknown parameters. Moreover, the system states will converge to the origin and the unknown magnitude/parameter can be recovered from the integral state. 
-%Specifically speaking, S \ref{preliminaries} proposes a new stability criterion for the stability analysis of a class of nonlinear systems subject to time-varying perturbations with unknown magnitudes. Chapter \ref{main} constructs integral controllers for a class of chain and nonlinear systems to achieve global regulation problems further more we analyzes a more general condition on  the time-varying perturbations with unknown magnitudes. Chapter \ref{EX} proposes several example to show the feasibility of the proposed strategies.
+This work introduces the \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework, a novel architecture bridging 
+high-level semantic planning and low-level dynamic control in embodied agents. While LLMs provide broad world knowledge 
+capable of decomposing abstract tasks, they lack real-world experience and physical grounding, often generating plans that 
+are plausible but not executable. DPTA addresses these limitations by synthesizing \textit{Penetrative AI}~\cite{xu2024penetrative}, \textit{Dynamic Movement Primitives (DMP)}~\cite{dmp}, and \textit{Hindsight Experience Replay (HER)}~\cite{her} into a cohesive system.
+
+First, DPTA enhances perception by leveraging Penetrative AI to interpret digitized sensor signals such as force and 
+torque, enabling inference of micro-level physical states (e.g., hinge stiffness, surface friction). Second,
+ it addresses the limitations of rigid code generation by parameterizing DMPs through Human-Robot Collaboration (HRC), 
+ ensuring kinematically sound and human-like motions. Finally, robust learning through HER allows the system to learn from failure, improving policy performance in high-dimensional state spaces.
+
+In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing ``Feel'' and ``Adapt''
+ capabilities. By grounding semantic intent in penetrative sensory data and leveraging both stored motion primitives 
+ and learned behaviors, DPTA enables embodied agents to plan logically and interact physically with nuance and adaptability.
