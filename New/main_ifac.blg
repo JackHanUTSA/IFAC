@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_ifac.aux
+The style file: ifacconf.bst
+Database file #1: ifacconf.bib
+Warning--I didn't find a database entry for "hrc"
+Warning--I didn't find a database entry for "her"
+Warning--empty year in strobel2024llm2swarm; set to ????
+You've used 15 entries,
+            2921 wiz_defined-function locations,
+            673 strings with 8449 characters,
+and the built_in function-call counts, 12676 in all, are:
+= -- 926
+> -- 839
+< -- 2
++ -- 309
+- -- 294
+* -- 1004
+:= -- 1974
+add.period$ -- 50
+call.type$ -- 15
+change.case$ -- 186
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 852
+empty$ -- 821
+format.name$ -- 342
+if$ -- 2490
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 200
+newline$ -- 84
+num.names$ -- 60
+pop$ -- 457
+preamble$ -- 1
+purify$ -- 153
+quote$ -- 0
+skip$ -- 292
+stack$ -- 0
+substring$ -- 432
+swap$ -- 456
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 135
+warning$ -- 1
+while$ -- 66
+width$ -- 0
+write$ -- 202
+(There were 3 warnings)
