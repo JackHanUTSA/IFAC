@@ -3,48 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main_ifac.aux
 The style file: ifacconf.bst
 Database file #1: ifacconf.bib
-Warning--I didn't find a database entry for "hrc"
 Warning--I didn't find a database entry for "her"
 Warning--empty year in strobel2024llm2swarm; set to ????
-You've used 15 entries,
+You've used 16 entries,
             2921 wiz_defined-function locations,
-            673 strings with 8449 characters,
-and the built_in function-call counts, 12676 in all, are:
-= -- 926
-> -- 839
+            676 strings with 8618 characters,
+and the built_in function-call counts, 13596 in all, are:
+= -- 1005
+> -- 883
 < -- 2
-+ -- 309
-- -- 294
-* -- 1004
-:= -- 1974
-add.period$ -- 50
-call.type$ -- 15
-change.case$ -- 186
-chr.to.int$ -- 15
-cite$ -- 16
-duplicate$ -- 852
-empty$ -- 821
-format.name$ -- 342
-if$ -- 2490
++ -- 325
+- -- 309
+* -- 1070
+:= -- 2104
+add.period$ -- 54
+call.type$ -- 16
+change.case$ -- 198
+chr.to.int$ -- 16
+cite$ -- 17
+duplicate$ -- 916
+empty$ -- 889
+format.name$ -- 360
+if$ -- 2686
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 200
-newline$ -- 84
-num.names$ -- 60
-pop$ -- 457
+missing$ -- 212
+newline$ -- 89
+num.names$ -- 64
+pop$ -- 486
 preamble$ -- 1
-purify$ -- 153
+purify$ -- 162
 quote$ -- 0
-skip$ -- 292
+skip$ -- 322
 stack$ -- 0
-substring$ -- 432
-swap$ -- 456
+substring$ -- 483
+swap$ -- 492
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 135
+type$ -- 144
 warning$ -- 1
-while$ -- 66
+while$ -- 72
 width$ -- 0
-write$ -- 202
-(There were 3 warnings)
+write$ -- 216
+(There were 2 warnings)

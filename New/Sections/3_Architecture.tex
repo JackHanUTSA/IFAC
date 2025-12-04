@@ -23,7 +23,10 @@ At the highest level, a Large Language Model (LLM) acts as the cognitive planner
 Unlike vision-centric pipelines, DPTA leverages \textit{Penetrative AI}~\cite{xu2024penetrative} to process raw sensor signals (e.g., joint torques, force/torque sensors). Using embedded knowledge and numerical reasoning, the LLM infers latent physical properties such as material stiffness, friction, compliance, or slippage. This enables detection of micro-level physical states that are difficult to capture visually.
 
 \subsection{Dynamic Execution Layer}
-When a task exceeds the capabilities of predefined motion primitives, DPTA employs \textit{Dynamic Movement Primitives (DMP)}~\cite{dmp} combined with \textit{Human-Robot Collaboration (HRC)}~\cite{hrc}. Demonstrated trajectories are encoded as DMPs and stored in a library for future reuse, allowing continual expansion of manipulation skills.
+When a task exceeds the capabilities of predefined motion 
+primitives, DPTA employs \textit{Dynamic Movement Primitives 
+(DMP)}~\cite{wu2023daydreamer} combined with \textit{Human-Robot Collaboration 
+(HRC)}~\cite{andrychowicz2017hindsight}. Demonstrated trajectories are encoded as DMPs and stored in a library for future reuse, allowing continual expansion of manipulation skills.
 
 \subsection{Robust Learning Layer}
 To ensure continuous improvement, DPTA incorporates \textit{Hindsight Experience Replay (HER)}~\cite{her}. Sparse rewards in manipulation tasks are relabeled, allowing failed trajectories to contribute to learning alternative goals. This approach improves sample efficiency and policy robustness, enabling the system to autonomously adapt over time.
