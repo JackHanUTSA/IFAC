@@ -78,8 +78,5 @@
     <requires type="dynamic">
       <file>ifacconf.bcf</file>
     </requires>
-    <requires type="editable">
-      <file>ifacconf.bib</file>
-    </requires>
   </external>
 </requests>
