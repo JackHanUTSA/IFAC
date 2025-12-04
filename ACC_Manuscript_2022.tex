@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+\usepackage{graphicx}          % Include this line if your 
+                               % document contains figures,
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{color}
+\usepackage{enumerate}	 
+\usepackage{wrapfig}
+\usepackage{tabularx}
+
+
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+\newtheorem{definition}{\protect\definitionname}
+%\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}%[chapter]
+\newtheorem{lemma}{\protect\lemmaname}%[chapter]
+\newtheorem{assumption}{\protect\assumptionname}%[chapter]
+\newtheorem{remark}{\protect\remarkname}%[chapter]
+\newtheorem{corollary}{\protect\corollaryname}%[chapter]
+\newtheorem{example}{\protect\examplename}%[chapter]
+\providecommand{\definitionname}{Definition}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\assumptionname}{Assumption}
+\providecommand{\remarkname}{Remark}
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\examplename}{Example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\LARGE \bf
+Linear Integral Control for Nonlinear Systems Subject to Time-Varying Perturbations with Unknown Magnitudes
+}
+
+
+\author{Zhifeng Han$^{1}$, Chunjiang Qian$^{1}$, \IEEEmembership{Fellow,~IEEE}, Xiandong Chen$^{2}$ and Claire Walton$^1$
+\thanks{$^{1}$Zhifeng Han and Chunjiang Qian are with Department of Electrical and Computer Engineering, The University of Texas at San Antonio, San Antonio, TX 78249, USA.
+	{\tt\small zhifeng.han@utsa.edu, \tt\small chunjiang.qian@utsa.edu.}}
+\thanks{$^{2}$Xiandong Chen is with School of Control Science and Engineering, Shandong University, Jinan, 250061, P.R. China and Department of Electrical and Computer Engineering, The University of Texas at San Antonio, San Antonio, TX 78249, USA.
+         {\tt\small chenxiandong@hotmail.com.}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{abstract} 
+This paper focuses on the problem of designing linear integral controllers for uncertain nonlinear systems subject to time-varying perturbations with unknown magnitudes by means of feedback domination method. The time-varying perturbations can include constant step disturbances, exogenous time-varying disturbances with unknown magnitudes, and modeling uncertainties with unknown system parameters. Firstly, a new linear integral controller consisting of integral dynamic is constructed to drive the states of uncertain systems without nonlinear terms to the origin asymptotically. 
+Secondly, by introducing high-gain technique, a new linear integral controller is then constructed to drive the states of uncertain nonlinear systems to the origin asymptotically. Finally, based on a proposed new stability criterion, we further extend our main results to study a class of uncertain nonlinear systems with a more general time-varying perturbations with unknown magnitudes.	
+\end{abstract}
+
+\input{Sections/1_Introduction}
+\input{Sections/2_Preliminaries}
+\input{Sections/3_Main_Results}
+\input{Sections/4_Examples}
+\input{Sections/5_Conclusions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{IEEEtran}        
+\bibliography{references}  
+\end{document}

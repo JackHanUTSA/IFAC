@@ -1,0 +1,495 @@
+\section{Main Results}\label{main}
+
+In this paper,  a new integral controller will be constructed for system (\ref{1}). Firstly, we will modify the technique of adding an integrator to design a novel regulator for a class of chain systems, and then applying the regulator to regulate system (\ref{1}).
+\subsection{Global Regulation of Chain Systems} 
+\begin{theorem}\label{the1}
+	For the following system
+	\begin{eqnarray}\label{2}
+		\left\{
+		\begin{array}{l}
+			\dot{z}_{i}=z_{i+1},~i=1,\ldots,n, \\
+			\dot{z}_{n+1}=u,
+		\end{array}
+		\right.
+	\end{eqnarray}
+there are positive constants $k^{*}$ and $a_i,~i=1,\ldots,n$ such that for any $K(t,~z) \geq k^*$, the linear controller
+	\begin{eqnarray}\label{u_z}
+		u = -K(t,z)(a_1z_1  + \cdots +  a_{n}z_{n}+ z_{n+1})
+	\end{eqnarray}
+can globally asymptotically stabilize system (\ref{2}).
+\end{theorem}
+\textbf{Proof.} Based on the adding a power integrator technique, we propose a constructive method to design a controller (\ref{u_z}) and Lyapunov functions in a recursive manner. \\
+\textbf{Step 1:} First, construct
+\begin{eqnarray*}\label{z_v1}
+	V_1 = \frac{1}{2} z_1^2.
+\end{eqnarray*}
+The time derivative of $V_1$ along system (\ref{2}) is
+\begin{eqnarray}\label{V1_dot}
+	\dot V_1|_{(\ref{2})}= z_1z_2 = \epsilon_1z_2^{*} + \epsilon_1(z_2 - z_2^{*})
+\end{eqnarray}
+with $\epsilon_1:=z_1$. For (\ref{V1_dot}), selecting the virtual controller $z_2^* = -\beta_1\epsilon_1=-(n+1)\epsilon_1$ yields
+\begin{eqnarray}\label{V1_dot_c}
+	\dot V_1|_{(\ref{2})} = -(n+1)\epsilon_1^2 + \epsilon_1(z_2 - z_2^{*}).
+\end{eqnarray}
+\textbf{Inductive Step:} 
+Suppose at step $k-1$, there is a $C^{1}$ Lyapunov function $V_{k-1}:\mathbb{R}^{k-1}\rightarrow \mathbb{R}$, which is positive definite and proper, and a set of $C^{1}$ virtual controllers $z_{1}^{\ast },\ldots ,z_{k}^{\ast }$, defined by
+\begin{eqnarray}\label{7}
+\begin{array}{l}
+z_{1}^{\ast }=0,
+ ~~~~~~~~~~~~~~~\xi _{1}=z_{1}-z_{1}^{\ast }, \\ 
+z_{2}^{\ast }=-\beta _{1}\xi _{1}, 
+~~~~~~~~~\xi _{2}=z_{2}-z_{2}^{\ast }, \\ 
+~~~~\vdots 
+~~~~~~~~~~~~~~~~~~~~~~ \vdots \\ 
+z_{k}^{\ast }=-\beta _{k-1}\xi _{k-1}, 
+~~~ \xi _{k}=z_{k}-z_{k}^{\ast }
+\end{array}
+\end{eqnarray}
+with positive constants $\beta _{1},\ldots ,\beta _{k-1}$ such that 
+\begin{eqnarray}\label{8}
+\begin{array}{l}
+\dot{V}_{k-1}|_{(\ref{2})}
+\leq 
+-\left( n-k+3\right) \left( \xi _{1}^{2}+\cdots +\xi _{k-1}^{2}\right)\\
+~~~~~~~~~~~~~+\xi _{k-1}\left( z_{k}-z_{k}^{\ast}\right).  
+\end{array}
+\end{eqnarray}
+It is clear that (\ref{8}) reduces to the inequality (\ref{V1_dot_c}) when $k=2$ under the definitions of (\ref{7}). Next, we will prove (\ref{8}) also holds at step $k$. To prove this, we choose
+\begin{eqnarray}\label{Wk}
+	W_k=\frac{1}{2}(z_{k}-z_{k}^{*})^{2}.
+\end{eqnarray}
+Therefore, for $V_k = V_{k-1} + W_k$, the time derivative of the Lyapunov function $V_{k}$ along system (\ref{2})
+is
+\begin{eqnarray}\label{11}
+\begin{array}{l}
+\dot{V}_{k}|_{(\ref{2})} %\\[3mm]
+%=\dot{V}_{k-1}+\dot{W}_{k}  \label{11}\\[3mm]
+%\leq
+%-\left( n-k+3\right) \left( \xi _{1}^{2}+\cdots +\xi_{k-1}^{2}\right)    \\[3mm]
+%~~+\xi _{k-1}\left( z_{k}-z_{k}^{\ast }\right) +\frac{\partial W_{k}}{\partial z_{k}}\dot{z}_{k}+\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}\dot{z}_{l} \\[3mm]
+%\leq
+%-\left( n-k+3\right) \left( \xi _{1}^{2}+\cdots +\xi_{k-1}^{2}\right)   \\[3mm]
+%~~+\xi _{k-1}\left( z_{k}-z_{k}^{\ast }\right)+\xi _{k}z_{k+1}+\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}\dot{
+%	z}_{l}  \\[3mm]
+\leq
+-\left( n-k+3\right) \left( \xi _{1}^{2}+\cdots +\xi_{k-1}^{2}\right)   \\[3mm]
+~~~~~~~~~~+\xi _{k-1}\left( z_{k}-z_{k}^{\ast }\right)+\xi _{k}z_{k+1}^{\ast }+\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}\dot{z}_{l}\\[3mm]
+~~~~~~~~~~+\xi _{k}\left( z_{k+1}-z_{k+1}^{\ast }\right).
+\end{array}
+\end{eqnarray}
+
+Now we give the estimate of the terms $\xi _{k-1}\left( z_{k}-z_{k}^{\ast }\right) $ and $\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}\dot{z%
+}_{l}$ in (\ref{11}).
+
+Firstly, from (\ref{7}) and by means of the Young inequality, we have 
+\begin{eqnarray} \label{12}
+	\xi _{k-1}\left( z_{k}-z_{k}^{\ast }\right) =\xi _{k-1}\xi _{k}\leq \frac{1}{%
+		2}\xi _{k-1}^{2}+\frac{1}{2}\xi _{k}^{2}. 
+\end{eqnarray}
+Next, from (\ref{7}), and
+%\begin{eqnarray}\label{13}
+%W_{k}& =&\frac{1}{2}\left( z_{k}-z_{k}^{\ast }\right) ^{2}.
+%&=&\frac{1}{2}\left( z_{k}+\beta _{k-1}\xi _{k-1}\right) ^{2}  \notag \\
+%&\vdots&  \notag \\
+%&=&\frac{1}{2}\left( z_{k}+\beta _{k-1}\left( z_{k-1}+\cdots +\beta
+%_{2}\left( z_{2}-z_{2}^{\ast }\right) \cdots \right) \right) ^{2}  \notag \\
+%&=&\frac{1}{2}\left( z_{k}+\beta _{k-1}\left( z_{k-1}+\cdots +\beta
+%_{2}\left( z_{2}+\beta _{1}z_{1}\right) \cdots \right) \right) ^{2}.  \notag
+%\end{eqnarray}
+ by means of (\ref{Wk}), we have
+\begin{eqnarray}\label{14}
+\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}\dot{z}_{l}
+%	=\sum_{l=1}^{k-1}\frac{\partial W_{k}}{\partial z_{l}}z_{l+1}   \\
+%&=&\left( z_{k}-z_{k}^{\ast }\right) \sum_{l=1}^{k-1}\beta _{k-1}\cdots
+%	\beta _{l}z_{l+1}  \notag \\
+%&=&\left( z_{k}-z_{k}^{\ast }\right) \sum_{l=1}^{k-1}\beta _{k-1}\cdots
+%	\beta _{l}\left( \left( z_{l+1}-z_{l+1}^{\ast }\right) +z_{l+1}^{\ast
+%	}\right)   \notag \\
+%&=&\xi _{k}\sum_{l=1}^{k-1}\beta _{k-1}\cdots \beta _{l}\left( \xi_{l+1}-\beta _{l}\xi _{l}\right)   \notag \\
+\leq 
+\frac{1}{2}\left( \xi _{1}^{2}+\cdots +\xi _{k-1}^{2}\right)+c_{k}\xi _{k}^{2},
+\end{eqnarray}%  
+where $c_{k}$ is a positive constant. Substituting (\ref{12}) and (\ref{14}) into (\ref{11}) yields
+\begin{eqnarray}\label{15} 
+\begin{array}{l}
+\dot{V}_{k}|_{(\ref{2})}
+%         &\leq &-\left( n-k+3\right) \left( \xi _{1}^{2}+\cdots +\xi
+%        _{k-1}^{2}\right) +\left( z_{k}-z_{k}^{\ast }\right) z_{k+1}^{\ast } \\
+\leq 
+ -\left( n-k+2\right) \left( \xi _{1}^{2}+\cdots +\xi_{k-1}^{2}\right)   \\[3mm]
+~~~~~~~~~~+\xi _{k}z_{k+1}^{\ast }+\left( c_{k}+\frac{1}{2}\right) \xi _{k}^{2}\\[3mm]
+~~~~~~~~~~+\left( z_{k}-z_{k}^{\ast}\right) \left( z_{k+1}-z_{k+1}^{\ast }\right). 
+\end{array}
+\end{eqnarray}
+Now construct the virtual controller%
+\begin{eqnarray}\label{16}
+\begin{array}{l}
+z_{k+1}^{\ast } =-\beta _{k}\xi _{k} %\\[3mm]
+=-\left( c_{k}+\frac{1}{2}+n-k+2\right) \xi _{k}
+\end{array}
+\end{eqnarray}
+and substituting (\ref{16})  into (\ref{15}), we have
+\begin{eqnarray*}\label{17}
+\begin{array}{l}
+\dot{V}_{k}|_{(\ref{2})}
+\leq
+-\left( n-k+2\right) \left( \xi _{1}^{2}+\cdots +\xi_{k-1}^{2}+\xi _{k}^{2}\right) \\[3mm]
+~~~~~~~~~~+\left( z_{k}-z_{k}^{\ast }\right) \left(z_{k+1}-z_{k+1}^{\ast }\right).  
+\end{array}
+\end{eqnarray*}
+This completes the inductive proof. \\
+\\
+\textbf{Last Step:} 
+The inductive argument shows that (\ref{8}) holds for $k=n+1$ with a set of virtual controllers (\ref{7}). Based on the inductive argument, we can choose the $(n+1)$th Lyapunov function    
+\begin{eqnarray*}\label{18}
+\begin{array}{l}
+V_{n+1} =V_{n}+W_{n+1}   %\\[3mm]
+=V_{n}+\frac{1}{2}\left( z_{n+1}-z_{n+1}^{\ast }\right) ^{2}.
+%&=&V_{n}+\frac{1}{2}\xi _{n+1}^{2}.  \notag
+\end{array}
+\end{eqnarray*}
+The time derivative of $V_{n+1}$ along system (\ref{2}) is
+\begin{eqnarray}\label{19}
+\begin{array}{l}
+\dot{V}_{n+1}|_{(\ref{2})} 
+%&=&\dot{V}_{n}+\dot{W}_{n+1}   \\
+%&\leq &-2\left( \xi _{1}^{2}+\cdots +\xi _{n}^{2}\right) +\xi _{n}\left(
+%z_{n+1}-z_{n+1}^{\ast }\right)  \notag \\
+%&&+\left( z_{n+1}-z_{n+1}^{\ast }\right) \left( z_{n+1}-z_{n+1}^{\ast}\right) ^{^{\prime }}  \notag \\
+\leq 
+-2\left( \xi _{1}^{2}+\cdots +\xi _{n}^{2}\right) +\xi_{n+1} u  \\[3mm]
+~~~~~~~~~~~~~+\xi _{n}\xi _{n+1}+\left( z_{n+1}-z_{n+1}^{\ast }\right) \left( -\dot{z}_{n+1}^{\ast }\right). 
+\end{array}
+\end{eqnarray} 
+Similar to the estimate of the terms (\ref{12}) and (\ref{14}), we have
+\begin{eqnarray}\label{20}
+	\xi _{n}\xi _{n+1}\leq \frac{1}{2}\xi _{n}^{2}+\frac{1}{2}\xi _{n+1}^{2}
+\end{eqnarray}
+and
+\begin{eqnarray} \label{21}
+\begin{array}{l}
+\left( z_{n+1}-z_{n+1}^{\ast }\right) \left( -\dot{z}_{n+1}^{\ast }\right)
+\leq 
+\frac{1}{2}\left( \xi _{1}^{2}+\cdots +\xi _{n}^{2}\right) \\[3mm]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+c_{n+1}\xi_{n+1}^{2}. 
+\end{array}
+\end{eqnarray}
+Substituting (\ref{20}) and (\ref{21}) into (\ref{19}), we have
+\begin{eqnarray}\label{22}
+\begin{array}{l}
+\dot{V}_{n+1}|_{(\ref{2})} 
+\leq
+-\left( \xi _{1}^{2}+\cdots +\xi _{n}^{2}\right) +\left( c_{n+1}+\frac{1}{2}\right) \xi_{n+1}^{2}\\[3mm]
+~~~~~~~~~~~~~~+\xi_{n+1} u. 
+\end{array}
+\end{eqnarray}
+
+By the adding a power integrator technique, we can simply choose the following controller
+\begin{eqnarray}\label{23}
+u =-K(t,z)\xi _{n+1},
+\end{eqnarray}
+where $K(t,z)\geq k^{*}=c_{n+1}+\frac{3}{2}$.
+Substituting (\ref{23}) into (\ref{22}), we have
+\begin{eqnarray}\label{24}
+	\dot{V}_{n+1}|_{(\ref{2})}\leq -\left( \xi _{1}^{2}+\cdots +\xi _{n}^{2}+\xi
+	_{n+1}^{2}\right).  
+\end{eqnarray}
+Thus, we have achieved that system (\ref{2}) is globally asymptotically
+stable under controller (\ref{23}), that is 
+\begin{eqnarray*} \label{25}
+\begin{array}{l}
+u =-K(t,z)\xi _{n+1}\\[3mm]
+%&=&-K(t,z)\left( z_{n+1}-z_{n+1}^{\ast }\right)  \notag \\
+%&=&-K(t,z)\left( z_{n+1}-\left( z_{n+1}^{\ast }\right) \right)  \notag\\
+%% &=&-K(t,z)\left( z_{n+1}-\left( -\beta _{n}\xi _{n}\right) \right) 
+%% \notag \\
+%% &=&-K(t,z)\left( z_{n+1}+\beta _{n}\xi _{n}\right)  \notag \\
+%&\vdots&  \notag \\
+~~=-K(t,z)( z_{n+1}+\beta_{n}( z_{n}+\cdots +\beta_{2}( z_{2}%\\[3mm]
++\beta_{1}z_{1}) \cdots)),
+\end{array}
+\end{eqnarray*}    
+where $a_{i}=\beta _{i}\cdots\beta _{n},~i=1,\ldots,n$. This completes our proof.\\
+\\
+Now it is time to present our main results for global regulating system (\ref{1}). First, we utilize Theorem \ref{the1} to solve the regulation problem of chain system (\ref{1}) when $f_i (\cdot)= 0, ~i = 1,\ldots,n$, i.e,
+\begin{eqnarray}\label{exp1}
+	\left\{
+	\begin{array}{l}
+		\dot{x}_{i}=x_{i+1},~i=1,\ldots,n-1,   \\
+		\dot{x}_{n}=u+d\left( t,x\right). 
+	\end{array}
+	\right.
+\end{eqnarray}
+To solve the problem, we assume that the time-varying perturbations with unknown magnitudes $d(t, x)$ satisfies the following assumption.
+% assumption 3.1
+\begin{assumption}\label{assum1}
+Assume there are an unknown constant $\theta $ and a known function $\alpha(t, x) \geq 1$ such that
+\begin{eqnarray*}
+	d(t, x) = \theta\alpha(t,x).
+\end{eqnarray*}
+\end{assumption}
+\begin{remark}
+The uncertain function $d(t,x)$ satisfying Assumption \ref{assum1} encompasses several types of uncertainties in system (\ref{exp1}). First, it includes constant disturbances as its special case when $\alpha(t,x) = 1$. For exogenous time-varying disturbance such as $d(t,x) = c(1 + 0.5\mathrm{sin}(t))$ with unknown magnitude $c$, we can simply choose $\alpha(t,x) = 2(1+ 0.5\mathrm{sin}(t)) \geq 1$ and $\theta = c/2 $. Moreover, $d(t,x)$ can include internal modeling uncertainties such as $d(t,x)=\theta(1+x_2^2)$ with unknown system parameter $\theta$. 	
+\end{remark}
+%\textbf{Theorem 3.1.2}
+\begin{theorem}\label{the2}
+Under Assumption \ref{assum1}, there are positive constants $k^{*}$ and $a_i,~i=1,\ldots,n$, such that the following  integral controller
+\begin{eqnarray}\label{t1}
+	\left\{
+	\begin{array}{l}
+		u = -k^*\alpha(t,x)(a_1x_0 +a_2x_1+ \cdots \\
+		~~~~~+ a_{n}x_{n-1} + x_n ), \\
+		\dot x_0 = x_1
+	\end{array}
+	\right.
+\end{eqnarray}
+globally regulates system (\ref{exp1}).
+\end{theorem}
+\textbf{Proof.} Define $z_1 = x_0 - \frac{\theta}{k*a_1}$, $z_i=x_{i-1}, i = 2, \ldots, n+1$. Under the new coordinates, it is clear that the closed-loop system (\ref{exp1}) and (\ref{t1}) can be rewritten as
+\begin{eqnarray}\label{exp1_1} 
+\dot{z}&=&\left[ 
+\begin{array}{c}
+		z_{2} \\ 
+		\vdots \\ 
+		z_{n+1} \\ 
+		-k^*\alpha \left( t,x\right) \left( a_{1}z_{1}+\cdots
+		+a_{n}z_{n}+z_{n+1}\right)
+	\end{array}
+	\right]  \nonumber\\
+	&=&F\left( t,z\right).        
+\end{eqnarray}
+By the proof of Theorem \ref{the1}, we can find positive constants $k^*$ and $a_i,~i=1,\ldots,n$ such that for $K(t,z) = k^* \alpha(t,x) \geq k^*$, system (\ref{exp1_1}) is globally regulated. In the case when $d(t,x) = \theta$ is an unknown constant, Theorem \ref{the2} holds for a controller with constant gains.
+\begin{corollary}\label{cor1}
+The system (\ref{exp1}) with $d(t,x) = \theta$ being an unknown constant $\theta$ can be globally regulated by the integral controller
+\begin{eqnarray*}\label{t2}
+	\left\{
+	\begin{array}{l}
+		u = -k^*(a_1x_0 +a_2x_1+ \cdots + a_{n}x_{n-1} + x_n ), \\
+		\dot x_0 = x_1
+	\end{array}
+	\right.
+\end{eqnarray*}
+for appropriate positive constants $k^*$ and $a_i,~i=1,\ldots,n$.
+\end{corollary}
+\subsection{Global Regulation of Nonlinear Systems}
+This section considers the global regulation problem of system (\ref{1}) when system nonlinearities satisfy the following assumption.
+%Assumptions 3.2
+\begin{assumption}\label{assum2} 
+For $i=1,\ldots ,n$, there is a known constant $c$ such that
+\begin{eqnarray*}\label{31}
+	\left\vert f_{i}\left( x_{1},\ldots ,x_{i}\right) \right\vert \leq c\left(\left\vert x_{1}\right\vert +\cdots +\left\vert x_{i}\right\vert \right).  
+\end{eqnarray*}
+\end{assumption}
+\begin{theorem}\label{the3}
+Under Assumptions \ref{assum1} and \ref{assum2}, there are positive constants $k^*$ and $a_1, \ldots, a_n$ such that for a large enough constant $L\geq 1$, the following integral controller
+\begin{eqnarray} \label{32}
+\left\{
+\begin{array}{l}
+u =-L^{n}k^*\alpha \left( t,x\right) \big(a_{1}x_{0}+a_{2}x_{1}+a_{3}\frac{x_{2}}{L} \\[3mm]
+~~~~~+\cdots+a_{n}\frac{x_{n-1}}{L^{n-2}}+\frac{x_{n}}{L^{n-1}}\big),   \\[3mm]
+\dot{x}_{0} = Lx_{1}  
+\end{array}
+\right.
+\end{eqnarray}
+with $\alpha(t,x)$ defined in Assumption \ref{assum1} solves the global regulation problem of system (\ref{1}).
+\end{theorem}
+\textbf{Proof.} Define $z_1 = x_0 - \frac{\theta}{k*a_1L^n}$, $z_{i}=\frac{x_{i-1}}{L^{i-2}},~ i = 2, \ldots, n+1$. By choosing the same constants $k^*$ and $a_i,~i =1, \ldots, n$ as in Theorem \ref{the2}, the closed-loop system (\ref{1}) and (\ref{32}) under the new coordinates can be rewritten as
+\begin{eqnarray*}\label{33}
+\left\{
+\begin{array}{l}
+\dot{z}_{1}=Lz_{2},\\ 
+\dot{z}_{2}=Lz_{3}+f_{1}(x_{1}),\\ 
+\dot{z}_{3}=Lz_{4}+\frac{f_{2}(x_{1},x_{2})}{L},\\ 
+~~~~~\vdots  \\ 
+\dot{z}_{n}=Lz_{n+1}+\frac{f_{n-1}(x_{1},\ldots,x_{n-1})}{L^{n-2}},\\ 
+\dot{z}_{n+1}=-Lk^*\alpha \left( t,x\right) \left( a_{1}z_{1}+\cdots
++a_{n}z_{n}+z_{n+1}\right)\\
+~~~~~~~~~+\frac{f_{n}(x_{1},\ldots,x_{n})}{L^{n-1}},\\ 
+\end{array}
+\right.
+\end{eqnarray*}
+which can be further rewritten as the following matrix form
+\begin{eqnarray}\label{34}
+	\dot{z}=LF\left( t,z\right) +\varPhi,
+\end{eqnarray}
+where $F(t,z)$ is the same as the one in (\ref{exp1_1}) and $\varPhi=\big(0,f_{1}\left( x_{1}\right),\frac{f_{2}\left( x_{1},x_{2}\right) }{L},\ldots,\frac{f_{n}\left( x_{1},\ldots ,x_{n}\right) }{L^{n-1}}\big)^{T}$. 
+
+
+
+
+By using the same Lyapunov function  $V_{n+1}$ constructed in Theorem \ref{the1}, we can see that the time derivative of $V_{n+1}$ along system (\ref{34}) is
+\begin{eqnarray}\label{35}
+\begin{array}{l}
+\dot{V}_{n+1}|_{(\ref{34})} \\[3mm]
+=\frac{\partial V_{n+1}}{\partial z}\left( LF\left( t,z\right) +\varPhi \right)\\[3mm]
+%=L\frac{\partial V_{n+1}}{\partial z}F\left( t,z\right) +\sum_{i=2}^{n+1}
+%	\frac{\partial V_{n+1}}{\partial z_{i}}\frac{f_{i-1}\left( x_{1},\ldots
+%		,x_{i-1}\right) }{L^{i-2}}  \\[3mm]
+\leq 
+-L\sum_{l=1}^{n+1}\xi _{l}^{2}+\sum_{i=2}^{n+1}\sum_{l=i}^{n+1}\frac{\partial V_{l}}{\partial z_{i}}\frac{f_{i-1}\left( x_{1},\ldots,x_{i-1}\right)}{L^{i-2}}. 
+\end{array}
+\end{eqnarray}
+By Assumption \ref{assum2} and the fact $L\geq 1$, we have  
+\begin{eqnarray}\label{36}
+\begin{array}{l}
+\left\vert \frac{f_{i-1}(\cdot) }{L^{i-2}}\right\vert  
+\leq 
+\frac{c\left( \left\vert x_{1}\right\vert+\cdots +\left\vert x_{i-1}\right\vert \right) }{L^{i-2}}   %\\[3mm]
+%~~~~~~~~~~
+%\leq 
+%c\left( \left\vert z_{2}\right\vert +\cdots +\left\vert z_{i}\right\vert \right) \\[3mm]
+%~~~~~~~~~~
+\leq 
+\tilde{c}\left( \left\vert \xi _{1}\right\vert +\cdots +\left\vert \xi_{i}\right\vert \right) 
+\end{array}
+\end{eqnarray}
+for a positive constant $\tilde{c}$.
+In addition, from the definition of system (\ref{13}), we have
+\begin{eqnarray} \label{37}
+\begin{array}{l}
+\sum_{l=i}^{n+1}\frac{\partial V_{l}}{\partial z_{i}}\leq \bar{c}%
+\sum_{l=i}^{n+1}\left\vert \xi _{i}\right\vert
+\end{array}  
+\end{eqnarray}
+for a positive constant $\bar{c}$.
+Then, by substituting (\ref{36}) and (\ref{37}) into (\ref{35}), we have%
+\begin{eqnarray*} \label{38}
+\begin{array}{l}
+\dot{V}_{n+1}|_{(\ref{34})} % \\[3mm]
+%\leq 
+%-L\sum_{l=1}^{n+1}\xi_{l}^{2} \\[3mm]
+%~~+\sum_{i=2}^{n+1}\bar{c}\sum_{l=i}^{n+1}\left\vert \xi_{i}\right\vert \tilde{c}\left( \left\vert \xi _{1}\right\vert +\cdots+\left\vert \xi _{i}\right\vert \right)  \\[3mm]
+\leq 
+-L\sum_{l=1}^{n+1}\xi _{l}^{2}+\hat{c}\sum_{l=1}^{n+1}\xi _{l}^{2}
+\end{array}
+\end{eqnarray*}%
+for a positive constant $\hat{c}$.
+
+Selecting a large enough $L \geq \hat{c}+1$, we can get a relation same as (\ref{24}). As a result, the integral controller (\ref{32}) can regulate system (\ref{1}) under Assumptions \ref{assum1} and \ref{assum2}.
+%\textbf{Remark 3.2.1}
+%\begin{remark}\label{chrm1}
+%In this section, a static high-gain parameter $L$ is introduced to achieve the global regulation problem for system (\ref{1}) under Assumptions \ref{assum1} and \ref{assum2}. The aim of introducing $L$ is to tackle the nonlinear terms $ f_i(\cdot),~i=1,\ldots,n$ by expanding the gain parameters $k^{*}$ and $a_i,~i=1,\ldots,n$ given in Theorem \ref{the2}, $L$ times, which makes the proof of Theorem \ref{the3} more concise. On the other hand, we can also achieve the global regulation of system (\ref{1}) under Assumptions \ref{assum1} and \ref{assum2} by following the proof of Theorems \ref{the1} and \ref{the2}. Specifically speaking, we can estimate the nonlinear term in each step of the proof process of Theorem  \ref{the1}, and then re-select gain parameters $k^{*}$ and $a_i,~i=1,\ldots,n$, rather than introducing $L$, to achieve our control objective.
+%\end{remark}
+%In order to elaborate Remark \ref{chrm1}, the following example is introduced.
+%\textbf{Example 3.1}
+%\textbf{Example 3.2.1}
+
+
+
+
+
+\subsection{Extension}
+We reconsider system (\ref{1}) where system vanishing uncertainties $f_{i}(x_{1},\ldots,x_{i}),~i=1,2,\ldots,n$ satisfy Assumption  \ref{assum2} and the non-vanishing uncertainty $d(t, x) $ satisfies the following assumption.
+
+%\textbf{Assumption 3} 
+\begin{assumption}\label{assum3}
+%
+Assume the non-vanishing uncertainty $d(t, x)$ satisfies
+\begin{eqnarray*}
+	d(t, x) = \theta\alpha(t,x),
+\end{eqnarray*}
+where $\theta $ is an unknown constant and $\alpha(t, x)$ is a continuous function. Moreover,  $\alpha(t, x)$ also satisfies
+$\alpha(t, x) \geq \bar{\alpha}(t) \geq 0$ where the continuous function $\bar{\alpha}(t)$ is a periodic function with $T>0$ being the period.
+%where $\theta $ is an \textit{unknown} constant and $\alpha(t, x)$ is a continuous function. Moreover,  $\alpha(t, x)$ also satisfies
+%$\alpha(t, x) \geq \bar{\alpha}(t)$ where the continuous function $\bar{\alpha}(t)$ is a periodic function and satisfies $\int_{0}^{T}\bar{\alpha}(s)> \sigma $ with $T>0$ being the period of $\bar{\alpha}(t)$ and $\sigma$ being a positive constant.
+\end{assumption}
+
+
+
+
+\begin{remark}
+Assumption \ref{assum3} is significantly different from Assumption \ref{assum1}, and brings great difficulties to the stability analysis of system (\ref{1}). Specifically speaking, due to the condition $\alpha(t, x) \geq 1$ in Assumption \ref{assum1}, there must be a constant $k^*$ in Theorem \ref{the2} such that $k^*\alpha(t, x) > c_{n+1}+\frac{1}{2}$ for all $(t, x) \in \mathbb{R}_{\geq 0} \times \mathbb{R}^{n}$. However, since $\alpha(t, x) \geq \bar{\alpha}(t) \geq 0$ holds in Assumption \ref{assum3} and for all $(t, x) \in \mathbb{R}_{\geq 0} \times \mathbb{R}^{n}$, we cannot choose the constant $k^*$, such that $k^*\alpha(t, x) > c_{n+1}+\frac{1}{2}$, which brings great challenges to the stability analysis of the closed-loop system.
+\end{remark}
+
+Based on Assumptions \ref{assum2} and \ref{assum3}, we can have the following result.
+%\textbf{Theorem 5.1} 
+\begin{theorem}\label{the4}
+%
+Under Assumptions \ref{assum2} and \ref{assum3}, there are positive constants $k^*$ and $a_1, \ldots, a_n$ such that for a large enough constant $L\geq 1$, the following integral controller
+\begin{eqnarray} \label{e32}
+\left\{
+\begin{array}{l}
+u =-L^{n}k^* \alpha(t,x) \big(a_{1}x_{0}+a_{2}x_{1}+\cdots+a_{n}\frac{x_{n-1}}{L^{n-2}}\\[3mm]
+~~~~~+\frac{x_{n}}{L^{n-1}}\big),  \\[3mm]
+\dot{x}_{0} = Lx_{1}  
+	\end{array}
+	\right.
+\end{eqnarray}
+with $\alpha(t,x)$ defined in Assumption \ref{assum3} solves the global regulation problem of system (\ref{1}).
+\end{theorem}
+\textbf{Proof.} Following the proof of Theorems \ref{the1}, \ref{the2} and \ref{the3}, we can easily obtain 
+\begin{eqnarray}\label{e1} 
+	\dot{V}_{n+1}|_{(\ref{34})} 
+	\leq -L\sum_{l=1}^{n}\xi _{l}^{2}+C\xi _{n+l}^{2} +\xi _{n+1}u,
+\end{eqnarray}
+where $C$ is a positive constant independent of $L$. From (\ref{e32}), we construct the controller 
+\begin{eqnarray}\label{e2} 
+	u=-L^{2}k^{*}\alpha(t, x)\xi _{n+1}
+\end{eqnarray}
+and substituting (\ref{e2}) into (\ref{e1}), we have
+\begin{eqnarray}\label{e3} 
+	\dot{V}_{n+1}|_{(\ref{34})} 
+	\leq -L\sum_{l=1}^{n}\xi _{l}^{2}+C\xi _{n+1}^{2} -L^{2}k^{*}\alpha(t, x)\xi _{n+1}^{2},
+\end{eqnarray}
+and by means of Assumption \ref{assum3} and $L\geq 1$, we further obtain
+\begin{eqnarray}\label{e4} 
+	\dot{V}_{n+1}|_{(\ref{34})} 
+	\leq 
+	-L\sum_{l=1}^{n}\xi _{l}^{2}-(Lk^{*}\bar{\alpha}(t)-C)\xi _{n+l}^{2}.
+\end{eqnarray}
+Then, from Assumption \ref{assum3}, we have $\bar{\alpha}(t) \geq 0$. If $\bar{\alpha}(t) > 0$ for $t\in[0,T]$, and following the continuous of  $\bar{\alpha}(t)$ and the proof of Theorem \ref{the3}, we can easily prove Theorem \ref{the4}.
+
+If there exists a time $t^{*}\in [0,T]$ such that $\bar{\alpha}(t^{*}) = 0$ and without loss of generality, we assume that only $t^{*}\in [0,T]$ exists making $\bar{\alpha}(t^{*}) = 0$. Firstly, define $T_{1}=\{\bar{\alpha}(t) \leq \varepsilon | ~t\in [0,T]\}$, $T_{2}=\{\varepsilon< \bar{\alpha}(t) \leq L | ~t\in [0,T]\}$ and $T_{3}=\{\bar{\alpha}(t) \geq L | ~t\in [0,T]\}$, where $\varepsilon$ is a small positive constant and $T_{3}$ can be an empty set. We can get that $t^{*} \in T_{1}$ and form (\ref{e4}), we have
+\begin{eqnarray}\label{e5} 
+	\dot{V}_{n+1}|_{(\ref{34})} 
+	\leq 
+	\left\{
+	\begin{array}{l}
+		C\sum_{l=1}^{n+1}\xi _{l}^{2},~~~~~~~~~~~~~~~~~~~t\in T_{1},\\
+		-(Lk^{*}\bar{\alpha}(t)-C)\sum_{l=1}^{n+1}\xi _{l}^{2}, ~t\in T_{2},\\
+		-L\sum_{l=1}^{n+1}\xi _{l}^{2}, ~~~~~~~~~~~~~~~~~t\in T_{3}.\\
+	\end{array}
+	\right.
+\end{eqnarray}
+By means of $\varepsilon< \bar{\alpha}(t) \leq L$ for $t \in T_{2}$ and from (\ref{7}), (\ref{e5}) can be further rewritten as
+\begin{eqnarray}\label{e6} 
+	\dot{V}_{n+1}|_{(\ref{34})} 
+	\leq 
+	\left\{
+	\begin{array}{l}
+		2CV_{n+1},~~~~~~~~~~~~~~~~~t\in T_{1},\\
+		-2(Lk^{*}\varepsilon-C)V_{n+1}, ~~~t\in T_{2},\\
+		-2LV_{n+1}, ~~~~~~~~~~~~~~~t\in T_{3}.\\
+	\end{array}
+	\right.
+\end{eqnarray}
+
+Integrating both sides of inequality (\ref{e6}) from $0$ to $T$, we have
+\begin{eqnarray}\label{e7}
+	V(T) 
+	\leq 
+	V(0) e^{2\left(\int_{T_{1}}Cds-\int_{T_{2}}(Lk^{*}\varepsilon-C)ds-\int_{T_{3}}Lds\right)}.
+\end{eqnarray}
+From (\ref{e7}), we  can get a large $L\geq 1$, such that $Lk^{*}\varepsilon-C>0$ and $\int_{T_{1}}Cds<\int_{T_{2}}(Lk^{*}\varepsilon-C)ds$ hold, which indicates $V(T) \leq V(0) $. On the other hand, since $\bar{\alpha}(t)$ is a periodic function with $T>0$ being the period, we can eventually get $\lim_{t \rightarrow +\infty}V(t)=0$. By Lemma \ref{lemma 2.2}, we can achieve the proof of Theorem \ref{the4}.
+
+
+
+
+
+
+
+
+
+
+%\begin{eqnarray}\label{s6}
+%\dot{x}=
+%\left[
+%\begin{array}{l}
+%	x_{2}^{p}\\
+%	x_{3}\\
+%	-a_{3}\left(a_{1}x_{1}+a_{2}x_{2}^{\frac{p+1}{2}}+x_{3}\right)^{\frac{2p}{p+1}}
+%\end{array}
+%\right]
+%=H(t,x).
+%\end{eqnarray}
+

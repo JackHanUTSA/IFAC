@@ -1,0 +1,92 @@
+\section{Examples}\label{EX}
+
+\begin{example}\label{exam2}
+To show the feasibility of the proposed strategy, we first consider the $2$-dimension case when the disturbance is a constant in system (\ref{exp1}), i.e., $d(t,x) = \theta = 2.$ By Corollary \ref{cor1}, an integral controller is constructed as
+\begin{eqnarray}\label{4.1}
+	\left\{
+	\begin{array}{l}
+		u = -k^*(a_1x_0 + a_2x_1+ x_2  ) ,\\
+		\dot x_0 = x_1,
+	\end{array}
+	\right.
+\end{eqnarray}	
+where $k^* = 3, ~a_1=1, ~a_2 = 2$ and the initial condition is $(x_0(0), x_1(0),x_2(0)) = (1, -1, 1.5)$. From the simulation result shown in Figure \ref{fig1}, we can see that the states $x_1$ and $x_2$ will converge to zero asymptotically and $x_0$ will converge to the constant $\frac{\theta }{a_1k^*}=\frac{2}{3}$.
+
+\begin{figure}
+	\centering
+	\includegraphics[height=2in,width=3.5in]{./images/fig1.pdf}
+	\caption{Trajectories of (\ref{exp1}) and (\ref{4.1}) with $d(t,x)=2$}
+	\label{fig1}
+\end{figure}
+When $d(t,x)$ is a time-varying function with an unknown magnitude, for example $d(t,x) = \theta(1 + 0.5\mathrm{sin}(t))$, the controller (\ref{4.1}) with constant gain will not be sufficient to drive the output to zero. As a matter of fact, as shown in the simulation in Figure \ref{fig2} under $\theta = -2$ and the  same initial condition, there are oscillations even for a large $k^*$.
+
+\begin{figure}
+	\centering
+	\includegraphics[height=2in,width=3.5in]{./images/fig2.pdf} 
+	\caption{Trajectories of (\ref{exp1}) and (\ref{4.1}) with time-varying $d(t,x)$}
+	\label{fig2}
+\end{figure}
+
+By Theorem \ref{the2}, we construct an integral controller 
+\begin{eqnarray}\label{4.2}
+	\left\{
+	\begin{array}{l}
+		u = -k(t,x)(a_1x_0  + a_2x_1 + x_2 ), \\
+		\dot x_0 = x_1
+	\end{array}
+	\right.
+\end{eqnarray}
+with a time-varying gain $k(t,x) = 6(1+0.5\mathrm{sin}(t)) \geq k^* = 3$.
+
+Based on the same initial condition and $\theta = -2$ , the state trajectories of closed-loop system (\ref{exp1}) and (\ref{4.2}) are shown in Figure \ref{fig3}. Clearly the states $x_1$ and $x_2$ of the closed-loop system converge to zero asymptotically.
+\begin{figure}
+	\centering
+	\includegraphics[height=2in,width=3.5in]{./images/fig3.pdf}
+	\caption{Trajectories of (\ref{exp1}) and (\ref{4.2}) with time varying $d(t,x)$}
+	\label{fig3}
+\end{figure}
+\end{example}
+
+
+
+Next, we consider a system with both a vanishing uncertainty and a non-vanishing uncertainty.
+\begin{example}\label{exam3}
+	Consider the following system inspired by the pendulum dynamic
+	\begin{eqnarray}\label{4.3}
+		\left\{
+		\begin{array}{l}
+			\dot x_1 = x_2, \\
+			\dot x_2 = u + \theta(1+x_2^{2}) + \mathrm{sin}(x_1)\delta(t),
+		\end{array}
+		\right.
+	\end{eqnarray}
+where $\theta$ is an unknown constant and $\delta(t)$ is an unknown disturbance satisfying $|\delta(t)| \leq 1$.
+\end{example}
+Firstly, we can verify that
+\begin{eqnarray*}\label{4.4}
+	|\mathrm{sin}(x_1)\delta(t)|\leq |x_1|,
+\end{eqnarray*}
+which satisfies Assumption \ref{assum2}. By Theorem \ref{the3}, we can construct the following integral controller
+\begin{eqnarray}\label{4.5}
+	\left\{
+	\begin{array}{l}
+		u = -L^2k^*(1+x_2^{2})(a_1x_0 + \frac{x_2}{L} + a_2x_1  ), \\
+		\dot x_0 = Lx_1.
+	\end{array}
+	\right.
+\end{eqnarray}
+In the simulation shown in Figure \ref{fig4}, we chose $\delta(t) = \mathrm{sin}(t),~ \theta = 3, ~L = 2,~ k^* = 3,~ a_1 = 1,~ a_2 = 2$ and the initial conditions $(x_0(0), x_1(0),x_2(0)) = (1, -1, 1.5)$. Clearly the states $x_1$ and $x_2$ of the closed-loop system converge to zero asymptotically.
+\begin{figure}
+	\centering
+	\includegraphics[height=2in,width=3.5in]{./images/fig4.pdf}
+	\caption{Trajectories of (\ref{4.3}) and (\ref{4.5}) with time varying $d(t,x)$}
+	\label{fig4}
+\end{figure}
+
+%%\textbf{Remark 4.1} 
+%\begin{remark}\label{rem4}
+%	As demonstrated in Figures \ref{fig1}, \ref{fig3} and \ref{fig4}, the states $x_1$, $x_2$ convergence to zero asymptotically regardless of various formats of the uncertainties. The unknown constant $\theta$ in the step disturbance, time-varying disturbance, or system uncertainty can also be recovered from the final value of the integral state $x_0$ guaranteed by Theorem \ref{the2} or Theorem \ref{the3}.
+%\end{remark}
+
+
+
