@@ -15,18 +15,3 @@ DMP Encoding Module & Gaussian basis encoding of human-demonstrated motion primi
 \hline
 \end{tabular}
 \end{table}
-\begin{table}[h]
-\centering
-\caption{System Components and Roles in the UFactory-Based DPTA Experiment}
-\begin{tabular}{p{3cm} p{5.1cm}}
-\hline
-\textbf{Component} & \textbf{Role} \\ \hline
-UFactory Lite 6 & Physical execution \& HRC skill acquisition \\
-UF Studio & Manual teaching with built-in recorder (joint position, velocity, gripper force) \\
-UFactory Python SDK (Modbus/xArm API) & Low-level execution, feedback readout, torque and velocity streaming \\
-IsaacSim + IsaacGym & Physics variability and large-scale parallel reinforcement learning \\
-LLM Planner (GPT-4/5) & High-level command interpretation and motion adaptation decisions \\
-DMP Encoding Module & Gaussian basis encoding of human-demonstrated motion primitives \\
-\hline
-\end{tabular}
-\end{table}

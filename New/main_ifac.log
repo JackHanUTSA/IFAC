@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  5 DEC 2025 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  5 DEC 2025 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -295,7 +295,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Overfull \hbox (3.02466pt too wide) in paragraph at lines 54--54
+Overfull \hbox (3.02466pt too wide) in paragraph at lines 55--55
  \OT1/cmr/m/it/10 2.2  Overview: Dy-namic Pen-e-tra-tive Tra-jec-tory Adap-ta-tion
  []
 
@@ -314,14 +314,6 @@ Overfull \hbox (5.50562pt too wide) in paragraph at lines 6--17
  [][] 
  []
 
-
-Overfull \hbox (2.6606pt too wide) in paragraph at lines 21--32
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/Sections/5_Conclusions.tex
 
 Package natbib Warning: Citation `her' on page 3 undefined on input line 6.
@@ -334,13 +326,13 @@ Package natbib Warning: There were undefined citations.
 Here is how much of TeX's memory you used:
  3596 strings out of 478994
  48353 string characters out of 5858184
- 354055 words of memory out of 5000000
+ 349869 words of memory out of 5000000
  21015 multiletter control sequences out of 15000+600000
  412427 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,10n,74p,585b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" (4 pages, 270034 bytes).
+Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" (4 pages, 269262 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
