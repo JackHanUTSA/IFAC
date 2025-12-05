@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex main_ifac"] 1764887439 "main_ifac.aux" "main_ifac.bbl" "main_ifac" 1764887475
+["bibtex main_ifac"] 1764887439 "main_ifac.aux" "main_ifac.bbl" "main_ifac" 1764957169
   "./ifacconf.bst" 1763674818 30606 0a94c3be66b01cc15224e14423d70f48 ""
   "ifacconf.bib" 1764687573 11364 a548bc12bb58bf3c23e6acab09e14821 ""
-  "main_ifac.aux" 1764887475 4948 7ae76742a4df2cde3895f5e75cb3939e "pdflatex"
+  "main_ifac.aux" 1764957169 4948 7ae76742a4df2cde3895f5e75cb3939e "pdflatex"
   (generated)
-  "main_ifac.bbl"
   "main_ifac.blg"
-["pdflatex"] 1764887474 "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" "main_ifac" 1764887475
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.aux" 1764887475 4948 7ae76742a4df2cde3895f5e75cb3939e ""
+  "main_ifac.bbl"
+["pdflatex"] 1764957168 "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" "main_ifac" 1764957169
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.aux" 1764957169 4948 7ae76742a4df2cde3895f5e75cb3939e ""
   "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.tex" 1764886939 4084 bbca6c0c4396d690e1f10d13f53bfe51 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -85,19 +85,19 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1631742384 2724743 d675871f9c627bd476b3b76422141bcd ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "IFAC.001.png" 1764794250 112731 916e62307ebb7f913336639b5fab1c9b ""
+  "IFAC.002.png" 1764957133 135607 20fdaf898d06719fe77812c6e0f3fbae ""
   "Sections/1_Introduction.tex" 1764874479 1588 c1383769902fe2180e5d8128bf63a1e6 ""
   "Sections/2_Background.tex" 1764886814 8627 0c31e0907c8dfa66853e6edf79c7aaa8 ""
-  "Sections/3_Architecture.tex" 1764886471 2981 1254057359987375b140bd30f3ca9234 ""
+  "Sections/3_Architecture.tex" 1764957168 2981 9951c95676c4188040a04b9e0f08cd97 ""
   "Sections/4_Experiment.tex" 1764887474 1617 8556a03ff64d4f4c12ccdc93ed26cb30 ""
   "Sections/5_Conclusions.tex" 1764874805 1566 c4d4406553634f890ea34e0e25a87391 ""
   "ifacconf.cls" 1763674818 65574 8eace75e0305628a2c07c0f2a28ee3cd ""
-  "main_ifac.aux" 1764887475 4948 7ae76742a4df2cde3895f5e75cb3939e "pdflatex"
+  "main_ifac.aux" 1764957169 4948 7ae76742a4df2cde3895f5e75cb3939e "pdflatex"
   "main_ifac.bbl" 1764887439 5801 27c3e8ed66453ca7d32df20050ccca1e "bibtex main_ifac"
   "main_ifac.tex" 1764886939 4084 bbca6c0c4396d690e1f10d13f53bfe51 ""
   (generated)
+  "main_ifac.log"
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf"
   "main_ifac.aux"
   "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.log"
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf"
-  "main_ifac.log"
   "main_ifac.pdf"
