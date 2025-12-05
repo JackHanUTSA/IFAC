@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  5 DEC 2025 14:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  5 DEC 2025 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,37 +305,27 @@ File: IFAC.002.png Graphic file (type png)
 <use IFAC.002.png>
 Package pdftex.def Info: IFAC.002.png  used on input line 8.
 (pdftex.def)             Requested size: 517.84015pt x 262.08861pt.
-
-
-Package natbib Warning: Citation `her' on page 3 undefined on input line 32.
-
-) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/Sections/4_Experiment.tex
+ [3 </Users/zhifenghan/Documents/Research Paper/IFAC/New/IFAC.002.png>]) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/Sections/4_Experiment.tex
 Overfull \hbox (5.50562pt too wide) in paragraph at lines 6--17
  [][] 
  []
 
-) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/Sections/5_Conclusions.tex
+) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/Sections/5_Conclusions.tex) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.bbl [4]) [5
 
-Package natbib Warning: Citation `her' on page 3 undefined on input line 6.
-
-[3 </Users/zhifenghan/Documents/Research Paper/IFAC/New/IFAC.002.png>]) (/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.bbl) [4]
-
-Package natbib Warning: There were undefined citations.
-
-(/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.aux) ) 
+] (/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.aux) ) 
 Here is how much of TeX's memory you used:
- 3596 strings out of 478994
- 48353 string characters out of 5858184
- 349869 words of memory out of 5000000
- 21015 multiletter control sequences out of 15000+600000
+ 3593 strings out of 478994
+ 48320 string characters out of 5858184
+ 354836 words of memory out of 5000000
+ 21012 multiletter control sequences out of 15000+600000
  412427 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,10n,74p,585b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" (4 pages, 269262 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "/Users/zhifenghan/Documents/Research Paper/IFAC/New/main_ifac.pdf" (5 pages, 280044 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
