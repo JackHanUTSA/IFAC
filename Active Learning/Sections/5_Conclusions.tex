@@ -1,18 +1,1 @@
 
-\section{Conclusion}
-This work introduces the \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)} framework, a novel architecture bridging 
-high-level semantic planning and low-level dynamic control in embodied agents. While LLMs provide broad world knowledge 
-capable of decomposing abstract tasks, they lack real-world experience and physical grounding, often generating plans that 
-are plausible but not executable. DPTA addresses these limitations by synthesizing 
-\textit{Penetrative AI}~\cite{xu2024penetrative}, 
-\textit{Dynamic Movement Primitives (DMP)}~\cite{huang2023inner}, 
-nd \textit{Hindsight Experience Replay (HER)}, see\cite{andrychowicz2017hindsight} into a cohesive system.
-
-First, DPTA enhances perception by leveraging Penetrative AI to interpret digitized sensor signals such as force and 
-torque, enabling inference of micro-level physical states (e.g., hinge stiffness, surface friction). Second,
- it addresses the limitations of rigid code generation by parameterizing DMPs through Human-Robot Collaboration (HRC), 
- ensuring kinematically sound and human-like motions. Finally, robust learning through HER allows the system to learn from failure, improving policy performance in high-dimensional state spaces.
-
-In summary, DPTA moves beyond the ``Say'' and ``Can'' dichotomy by introducing ``Feel'' and ``Adapt''
- capabilities. By grounding semantic intent in penetrative sensory data and leveraging both stored motion primitives 
- and learned behaviors, DPTA enables embodied agents to plan logically and interact physically with nuance and adaptability.

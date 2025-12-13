@@ -1,22 +1,27 @@
 \section{Introduction}\label{introduction}
-interactive robots mission is a complex mission it need to nagvigate in complex and 
-dynamic environment also need to fully flexable to planing the sequentially sub tasks. 
-In order to achieve the goal we demo a method by utlize LLMs(large language model) and Reenforcement Learning. 
-Our idea focuses on using an LLM's capacity for precise, short-horizon physical reasoning to 
-dynamically select or modify the parameters of complex, learned robotic trajectories, 
-effectively allowing the robot to autonomously execute tasks that previously required initial human intervention.
-The conceptual framework of \textbf{Dynamic Penetrative Trajectory Adaptation (DPTA)}
-represents a synthesis of three complementary AI paradigms. 
-First, Penetrative AI enables contextual and semantic understanding by
-leveraging large language model-based sensor comprehension for high-level intent extraction
-and environmental interpretation. 
-Second, the combination of Dynamic Movement Primitives (DMP) and 
-Human–Robot Collaboration (HRC) contributes to adaptable trajectory generation
-through shared autonomy, interactive learning, and human demonstration. 
-Third, Robust Reinforcement Learning (RL) performs policy optimization and
-closed-loop execution under uncertainty, ensuring real-time correction and robust action
-adaptation. 
-Together, these three paradigms form the foundation of the DPTA framework, enabling 
-semantic reasoning, dynamic motion modification, and reliable trajectory shaping in complex 
-robotic environments.
 
+This is the most critical area for "Focus Mode." In creative writing, an LLM hallucination is a funny plot twist. In robotics, a hallucination is a crash.
+
+When controlling hardware (like your e-puck2), the "crossing paths" problem you mentioned is dangerous. If the LLM starts "thinking" about the philosophy of movement instead of outputting a motor velocity, latency spikes and the robot hits a wall.
+
+Here is how we apply the Focus Mode architecture to robotic control to ensure safety and precision.
+
+
+1. The Architecture: Split the Brain
+We cannot have one LLM doing everything. We must split the control loop into two distinct agents with "Focused" system prompts.
+
+Agent A: The Strategist (High Level)
+
+Focus: Logic, planning, sequence, environment analysis.
+
+Input: "Find the red object."
+
+Output: A list of sub-goals (e.g., "Rotate 90 degrees," "Move forward 10cm").
+
+Agent B: The Driver (Low Level - "Focus Mode")
+
+Focus: Strictly translating sub-goals into hardware commands (JSON).
+
+Input: "Rotate 90 degrees."
+
+Output: {"left_motor": 500, "right_motor": -500, "duration_ms": 1000}.
