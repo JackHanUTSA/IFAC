@@ -1,27 +1,4 @@
 \section{Introduction}\label{introduction}
 
-This is the most critical area for "Focus Mode." In creative writing, an LLM hallucination is a funny plot twist. In robotics, a hallucination is a crash.
-
-When controlling hardware (like your e-puck2), the "crossing paths" problem you mentioned is dangerous. If the LLM starts "thinking" about the philosophy of movement instead of outputting a motor velocity, latency spikes and the robot hits a wall.
-
-Here is how we apply the Focus Mode architecture to robotic control to ensure safety and precision.
-
-
-1. The Architecture: Split the Brain
-We cannot have one LLM doing everything. We must split the control loop into two distinct agents with "Focused" system prompts.
-
-Agent A: The Strategist (High Level)
-
-Focus: Logic, planning, sequence, environment analysis.
-
-Input: "Find the red object."
-
-Output: A list of sub-goals (e.g., "Rotate 90 degrees," "Move forward 10cm").
-
-Agent B: The Driver (Low Level - "Focus Mode")
-
-Focus: Strictly translating sub-goals into hardware commands (JSON).
-
-Input: "Rotate 90 degrees."
-
-Output: {"left_motor": 500, "right_motor": -500, "duration_ms": 1000}.
+We use world model to predict the future based on historical data. \cite{hafner2019dream} world models allow for planning and behavior 
+learning given only small amounts of real world interaction
