@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex main_active_learning"] 1766430103 "main_active_learning.aux" "main_active_learning.bbl" "main_active_learning" 1766430136
+["bibtex main_active_learning"] 1766430103 "main_active_learning.aux" "main_active_learning.bbl" "main_active_learning" 1766430386
   "./ifacconf.bst" 1764868946 30606 0a94c3be66b01cc15224e14423d70f48 ""
   "ifacconf.bib" 1766429971 12583 538a73dea539a93bccf387f1ab109a31 ""
-  "main_active_learning.aux" 1766430136 918 65a64df1fd7de1889be783eed6d5e59d "pdflatex"
+  "main_active_learning.aux" 1766430386 918 65a64df1fd7de1889be783eed6d5e59d "pdflatex"
   (generated)
-  "main_active_learning.bbl"
   "main_active_learning.blg"
-["pdflatex"] 1766430135 "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.pdf" "main_active_learning" 1766430136
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.aux" 1766430136 918 65a64df1fd7de1889be783eed6d5e59d ""
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.tex" 1765479298 4441 e2bdfeb1a44919dc7b16c999c3192faa ""
+  "main_active_learning.bbl"
+["pdflatex"] 1766430386 "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.tex" "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.pdf" "main_active_learning" 1766430386
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.aux" 1766430386 918 65a64df1fd7de1889be783eed6d5e59d ""
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.tex" 1766430386 4611 afaed47b549a06156fdbbf56b7797e21 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -84,12 +84,12 @@
   "Sections/4_Experiment.tex" 1765479472 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Sections/5_Conclusions.tex" 1765479475 2 81051bcc2cf1bedf378224b0a93e2877 ""
   "ifacconf.cls" 1764868946 65574 8eace75e0305628a2c07c0f2a28ee3cd ""
-  "main_active_learning.aux" 1766430136 918 65a64df1fd7de1889be783eed6d5e59d "pdflatex"
+  "main_active_learning.aux" 1766430386 918 65a64df1fd7de1889be783eed6d5e59d "pdflatex"
   "main_active_learning.bbl" 1766430103 614 2e5b2a53ab5db61a12a64f1e91f40394 "bibtex main_active_learning"
-  "main_active_learning.tex" 1765479298 4441 e2bdfeb1a44919dc7b16c999c3192faa ""
+  "main_active_learning.tex" 1766430386 4611 afaed47b549a06156fdbbf56b7797e21 ""
   (generated)
-  "main_active_learning.aux"
-  "main_active_learning.log"
-  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.pdf"
   "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.log"
+  "main_active_learning.log"
   "main_active_learning.pdf"
+  "/Users/zhifenghan/Documents/Research Paper/IFAC/Active Learning/main_active_learning.pdf"
+  "main_active_learning.aux"
